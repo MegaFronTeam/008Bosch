@@ -1,0 +1,145 @@
+// start .sConfirm
+@use "sass:math";
+
+.sConfirm {
+	// --sTPB: 24px;
+
+	--sPT: 0;
+	--sPB: 60px;
+	@include media-breakpoint-up(md){
+		// --sPT: 24px;
+		--sPB: 72px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: 120px;
+	}
+
+	&__box{
+		border: 1px solid $gray-310;
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		background-image: linear-gradient(135deg, #20A5B6 0%, #00869A 100%);
+
+		padding: 24px 15px;
+		@include media-breakpoint-up(xsm){
+			padding: 24px 20px;
+		}
+		@include media-breakpoint-up(sm){
+			padding: 48px 24px;
+		}
+
+		// &--green{
+		// 	color: $white!important;
+		// 	*{
+		// 		color: $white!important;
+		// 	}
+
+		// 	background-color: $primary;
+		// 	border-color: $primary;
+		// }
+
+		.logo {
+			position: absolute;
+			left: 50%;
+			bottom: -70px;
+			transform: translateX(-50%);
+		}
+		&--2 {
+			@include media-breakpoint-up(sm) {
+				padding-bottom: rem(110);
+			}
+			.logo {
+				@include media-breakpoint-down(lg) {
+					bottom: -40px;
+					width: 100%;
+				}
+				@include media-breakpoint-down(sm) {
+					bottom: -20px;
+				}
+			}
+		}
+	}
+	&__logo{
+		position: absolute;
+		height: 100%;
+		max-height: 189px;
+		width: rem(299);
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(210, 210, 210, 0.28);
+		z-index: -1;
+	}
+	&__title{
+		font-weight: 700;
+		line-height: math.div(29, 36);
+		color: $white;
+		background-color: $red;
+		display: inline-block;
+    padding: 7px 5px 0px 5px;
+		font-size: 24px;
+		margin-bottom: 34px;
+		// @include media-breakpoint-up(md){
+		// 	font-size: 36px;
+		// 	margin-bottom: 48px;
+		// }
+	}
+	&__txt{
+		font-size: 14px;
+		color: $white;
+		font-weight: 400;
+		@include media-breakpoint-up(md){
+			font-size: 18px;
+		}
+		line-height: math.div(25, 18);
+		margin-bottom: 28px;
+		span {
+			font-family: "HelveticaNeue";
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+	}
+	&__await{
+		font-size: 14px;
+		line-height: math.div(20, 14);
+		color: $white;
+		max-width: rem(263);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(28);
+		span {
+			display: inline-block;
+			color: $white;
+			font-weight: 700;
+			margin-top: rem(8);
+		}
+	}
+	&__btn{
+		width: 100%;
+		max-width: 263px;
+		// color: $primary;
+	}
+	&__btn-white{
+		@extend .btn;
+		@extend .btn-outline-white;
+		padding: 15px 20px;
+
+		color: $white!important;
+		background-color: transparent!important;
+		&:hover{
+			color: $primary!important;
+			background-color: $white!important;
+		}
+
+		width: 100%;
+		@include media-breakpoint-up(md){
+			width: 262px;
+		}
+	}
+	&__btns-row{
+		& > *{
+			margin-bottom: 12px;
+		}
+		margin-bottom: -12px;
+	}
+} // end.sConfirm

@@ -1,0 +1,22 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+e.slider-wrap
+				.swiper.gallery-top
+					.swiper-wrapper
+						+headerBlockSlide()
+						+headerBlockSlide()
+						//- +headerBlockSlide(2)
+						+headerBlockSlide()
+						+headerBlockSlide()
+						+headerBlockSlide()
+					.swiper-pagination
+				+arrow('d-none d-xl-flex')
+
+	// end headerBlock
+
+mixin headerBlockSlide(imgNum='1')
+	+e.slide.swiper-slide.bg-wrap
+		+e.slide-link(href='#')
+			img.swiper-lazy(src="#" data-src=`img/@2x/header-slide-${imgNum}.png`, alt="")
