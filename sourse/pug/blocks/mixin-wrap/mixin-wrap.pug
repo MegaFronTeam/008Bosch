@@ -31,14 +31,15 @@ mixin page-head(title, logout, icon, ...items)
 	+b.page-head&attributes(attributes)
 		.container
 			+breadcrumb(...items)
-		+e.title-wrap
-			.container
-				+e.title
-					if icon
-						+icon(`${icon}`)
-					h1!= title
-				if logout 
-					+e.log-out(href='#').btn-primary
-						+icon('exit')
-						//- img(loading="lazy" src="img/svg/exit2.svg" alt="")
-						span Выйти
+		if title
+			+e.title-wrap
+				+e.container.container
+					+e.title
+						if icon
+							+icon(`${icon}`)
+						h1!= title
+					if logout 
+						+e.log-out(href='#')
+							+icon('exit')
+							//- img(loading="lazy" src="img/svg/exit2.svg" alt="")
+							span Выйти

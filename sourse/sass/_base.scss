@@ -721,6 +721,7 @@ a{
 		&:last-child{
 			a{
 				color: #000000;
+				pointer-events: none;
 			}
 			&:after{
 				content: none;
