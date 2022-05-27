@@ -41,43 +41,43 @@ mixin orderRow(name,val,addClasses='')
 		.col-auto(class=addClasses)=val
 
 mixin cartItem()
-	//- +e.item
-	//- 	+e.tag Новинка
-	//- 	+e.cross(href='#')
-	//- 		+icon('cross')
-	//- 	+e.row.row
-	//- 		.col-auto
-	//- 			+e.img
-	//- 				img(loading="lazy" src='img/@2x/category-7.png' alt="")
-	//- 		.col
-	//- 			+e.inner-row.row
-	//- 				+e.txt-col.col-md
-	//- 					+e.title(href="#") Шуруповерт с 6 положениями регулировки
-	//- 					+e.code FS2700
-	//- 				+e.inp-col.col-md-auto
-	//- 					+e.inputs
-	//- 						+e.i-btn--min -
-	//- 						+e.INPUT.amount-input.form-control(type="number" value="1")
-	//- 						+e.i-btn--plus +
-	//- 				+e.price-col.col-md-auto
-	//- 					+e.price--old 18 500 ₽
-	//- 					+e.price--new 16 500 ₽
 	+e.item
-		+e.tag Новинка
 		+e.cross(href='#')
 			+icon('delete')
-		+e.wrap
-			+e.img
-				img(loading="lazy" src='img/@2x/category-7.png' alt="")
-			+e.content
-				+e.txt-col
-					+e.title(href="#") Шуруповерт с 6 положениями регулировки
-					+e.code FS2700
-				+e.inp-col
-					+e.inputs
-						+e.i-btn--min -
-						+e.INPUT.amount-input.form-control(type="number" value="1")
-						+e.i-btn--plus +
-				+e.price-col
-					+e.price--old 18 500 ₽
-					+e.price--new 16 500 ₽
+		+e.img
+			+e.tag Новинка
+			img(loading="lazy" src='img/@2x/category-7.png' alt="")
+		+e.info-wrap
+			+e.product-head
+				a(href="#") GBH 36 V-LI PLUS
+				p Клеевой пистолет
+			+e.product-body
+				+e.product-feature
+					+e.feature-title Страна производства
+					+e.feature-text Швеция
+				+e.product-feature
+					+e.feature-title Габариты в упаковке (мм)
+					+e.feature-text 305 x 520 x 610
+				+e.product-feature
+					+e.feature-title Вес
+					+e.feature-text 19.2кг
+		+e.price-wrap
+			+e.discount -10%
+			+e.price-col
+				+e.price--new 24 600 ₽
+				+e.price--old 28 400 ₽
+			+e.inputs
+				+e.i-btn--min -
+				+e.INPUT.amount-input.form-control(type="number" value="1")
+				+e.i-btn--plus +
+			
+
+	//- +e.item
+	//- 	+e.wrap
+	//- 		+e.img
+	//- 			img(loading="lazy" src='img/@2x/category-7.png' alt="")
+	//- 		+e.content
+	//- 			+e.txt-col
+	//- 				+e.title(href="#") GBH 36 V-LI PLUS
+	//- 				+e.code Клеевой пистолет
+	//- 			+e.inp-col
