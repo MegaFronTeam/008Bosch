@@ -3,27 +3,23 @@ mixin sArticals()
 	+b.SECTION.sArticals.section#sArticals&attributes(attributes)
 		.container
 			+b.section-title
-				.row.align-items-center
-					.col
-						h2.mb-0 Это интересно
-					.col-auto
-						+e.all-links(href='#') Все статьи
+				h2 Статьи
 			+e.row.row
-				+itemNews("1",'Заголовок SEO текста', descr, 'col-md-4')
-				+itemNews("2",'Заголовок SEO текста', descr, 'col-md-4')
-				+itemNews("3",'Заголовок SEO текста', descr, 'col-md-4')
+				+itemNews("1",'Доверяйте ремонт техники только профессионалам Bosch', 'Все заказы бытовой техники, оформленные в марте, будут доставлены на первой или второй неделе апреля по ранее согласованной и оплаченной стоимости. Надеемся на ваше понимание!', 'col col-md-6')
+				+itemNews("2",'Избавтесь от&nbsp;пыли чтобы, не&nbsp;вдыхать&nbsp;её', 'Способы удаления пыли для более легкой и безопасной работы', 'col col-md-6')
+			+e.btn-wrap
+				+btn('Все статьи').btn.btn-outline-primary
 	// end sArticals
 
-mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-sm-6 col-lg-4')
+mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col col-md-6')
 	+e.col(class=bootClasses)&attributes(attributes)
-		+e.img-wrap(href="#")
-			img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
-		+e.text-wrap
-			+e.title(href="#")=t
-			+e.tag Событие
-			+e.descr!= descr
-			+e.more(href='#') Читать дальше
-				+icon('chevron-right')
+		+e.news-item(href="#")
+			+e.tag Измерительная техника
+			+e.img-wrap.DIV
+				img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
+			+e.text-wrap
+				+e.title!= t
+				+e.descr!= descr
 
 mixin sArticalsPage()
 	// start sArticals

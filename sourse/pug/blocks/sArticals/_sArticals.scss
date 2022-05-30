@@ -35,88 +35,70 @@
 			margin-bottom: 0;
 		}
 	}
-
-
-	.section-title{
-		&__all-links{
-			display: flex;
-			align-items: center;
-			line-height: math.div(17, 14);
-			padding-right: 20px;
-
-			.icon{
-				font-size: 12px;
-				margin-left: 12px;
-				color: transparent;
-				stroke: $primary;
-			}
+		h2 {
+			margin-bottom: rem(30);
 		}
-	}
+
 	&__row{
-		& > *{
-			margin-bottom: 30px;
-		}
-		margin-bottom: -30px;
-		@include media-breakpoint-up(xl){
-			& > *{
-				margin-bottom: 48px;
-			}
-			margin-bottom: -48px;
-		}
+		margin-bottom: rem(60);
+	}
+	&__news-item {
+		position: relative;
+		display: block;
 	}
 	&__img-wrap{
+		display: inline-block;
 		@extend .accept-ratio-frame-nh;
 		padding-top: math.div(220, 360) * 100%;
-
 		&:after{
 			@include mt();
-			content: 'Читать';
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
 			z-index: 2;
-			opacity: 0;
 			width: 100%;
 			height: 100%;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-
-			background-color: rgba($primary, .75);
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 			color: $white;
 		}
 		&:hover{
 			&:after{
-				opacity: 1;
+				background: linear-gradient(180deg, rgba(0, 99, 154, 0) 0%, rgba(0, 99, 154, 0.7) 100%);
 			}
 		}
 	}
 	&__text-wrap {
-		padding: 20px;
-		border: 1px solid $gray-100;
-		border-top: none;
+		padding: 30px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		max-height: 75%;
+		overflow: hidden;
+		color: $white;
+		z-index: 10;
+		pointer-events: none;
 	}
 	&__title{
-		font-weight: 700;
-		font-size: 20px;
-		color: #4E4E4E;
-		margin-bottom: rem(7);
 		display: inline-block;
-		&:hover{
-			color: $primary;
-		}
+		margin-bottom: rem(7);
+		max-width: 80%;
+		font-size: rem(24);
+		line-height: 125%;
 	}
 	&__tag {
+		position: absolute;
+		top: 32px;
+		left: 40px;
 		margin-bottom: 12px;
+		padding: 2px 10px;
 		font-size: 14px;
-		color: #949494;
+		color: $white;
+		background-color: $primary;
+		z-index: 10;
 	}
 	&__descr {
-		margin-bottom: 13px;
-		color: #4E4E4E;
-		line-height: 137%;
+		line-height: 140%;
 	}
 	&__more {
 		color: $blue;
@@ -146,25 +128,12 @@
 			margin-left: rem(10);
 		}
 	}
-
-	&__plus-btn{
+	&__btn-wrap {
+		text-align: center
+	}
+	&__btn{
 		@extend .btn;
 		@extend .btn-light;
-
-		background-color: $gray-100;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-
-		.icon{
-			font-size: 24px;
-			stroke: $primary;
-			stroke-width: 2px;
-		}
 	}
 	&__image-wrap {
 		position: relative;

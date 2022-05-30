@@ -217,28 +217,28 @@ function eventHandler() {
 	};
 
 	//ccs vars
-	let blueLine = document.querySelector(".blue-line--js");
+	let topLine = document.querySelector(".topLine--js");
 	let topNav = document.querySelector(".top-nav--js");
 	let buyBl = document.querySelector(".buy-bl--js");
 
-	function calcblueLineHeight() {
-		document.documentElement.style.setProperty('--blue-line-h', `${blueLine.offsetHeight}px`);
-		document.documentElement.style.setProperty('--top-nav-bot', `${topNav.offsetHeight + blueLine.offsetHeight}px`);
+	function calctopLineHeight() {
+		document.documentElement.style.setProperty('--top-line-h', `${topLine.offsetHeight}px`);
+		document.documentElement.style.setProperty('--top-nav-bot', `${topNav.offsetHeight + topLine.offsetHeight}px`);
 		if (buyBl){
 			document.documentElement.style.setProperty('--buy-bl-h', `${buyBl.offsetHeight}px`);
 		}
 	}
 
-	window.addEventListener('resize', calcblueLineHeight, { passive: true });
-	window.addEventListener('scroll', calcblueLineHeight, { passive: true });
-	calcblueLineHeight();
+	window.addEventListener('resize', calctopLineHeight, { passive: true });
+	window.addEventListener('scroll', calctopLineHeight, { passive: true });
+	calctopLineHeight();
 
 	//mob menu
 	$('.burger--js').click(function (){
 		$(this).toggleClass('active');
 		$('body').toggleClass('fixed2');
 		$('.mob-menu--js').toggleClass('active');
-		calcblueLineHeight();
+		calctopLineHeight();
 	});
 	//submenu
 	$('.has-dd-js').click(function (){
@@ -263,10 +263,10 @@ function eventHandler() {
 		slidesPerView: 1,
 
 		//
-		navigation: {
-			nextEl: '.headerBlock .swiper-next',
-			prevEl: '.headerBlock .swiper-prev',
-		},
+		// navigation: {
+		// 	nextEl: '.headerBlock .swiper-next',
+		// 	prevEl: '.headerBlock .swiper-prev',
+		// },
 		//
 		pagination: {
 			el: '.headerBlock .swiper-pagination',

@@ -2,22 +2,22 @@ mixin sNewsBox(data)
 	// start sNewsBox
 	+b.SECTION.sNewsBox.section#sNewsBox&attributes(attributes)
 		.container
-			+e.box
-				.row
-					.col-12.col-lg-2
-						+e.title-col
-							h2.mb-0 Новости
-					+e.content-col.col
-						+e.items
-							+NewsBoxItem('01 Января, 2020', 'Варианты подарков на Новый Год? Конечно же инструмент и аксессуары от HiKOKI!')
-							+NewsBoxItem('19 Декабря, 2019', 'New power tools catalogue 2020 – 2021 now available.')
-							+NewsBoxItem('11 Декабря, 2019', 'New AC brushless web page now available.')
-						+e.all-links(href='#')
-							span Все новости
-							+icon('chevron-right')
+			h2 Новости
+			+e.row.row
+				+NewsBoxItem('1', '12.05.2022', 'Всего один CLICK!','Все заказы бытовой техники, оформленные в&nbsp;марте, будут доставлены на&nbsp;первой или второй неделе апреля по&nbsp;ранее согласованной и&nbsp;оплаченной стоимости. Надеемся на&nbsp;ваше понимание!')
+				+NewsBoxItem('2','12.05.2022', 'Все данные в одном формате','MeasureOn – приложение для простого документирования поэтажных планов помещений, результатов измерений, фотографий и заметок прямо на рабочей площадке.')
+				+NewsBoxItem('3','12.05.2022', 'Созданы для работы по дереву','Все заказы бытовой техники, оформленные в марте, будут доставлены на первой или второй неделе апреля по ранее согласованной и оплаченной стоимости. Надеемся на ваше понимание!')
+			+e.btn-wrap
+				+btn('Все статьи').btn.btn-outline-primary
+
 	// end sNewsBox
 
-mixin NewsBoxItem(date, txt)
-	+e.item(href="#")
-		+e.date=date
-		+e.txt=txt	
+mixin NewsBoxItem(img,date, title,descr)
+	.col.col-md-6.col-lg-4
+		+e.item(href="#")
+			+e.img-wrap
+				img(loading="lazy" src=`img/@2x/news-${img}.jpg` alt="")
+			+e.date=date
+			+e.title!= title
+			+e.descr!= descr
+			+e.more Читать

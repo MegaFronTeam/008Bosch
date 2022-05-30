@@ -3,6 +3,16 @@ mixin footer()
     +e.head
       .container
         +e.head-row.row.align-items-center
+          .col.col-sm-6
+            +e.share(href="#")
+              +icon('share')
+              | Поделиться
+          .col.col-sm-6
+            +e.social
+              | Мы в социальных сетях
+              +soc()
+                +item-sos('youtube')
+                +item-sos('vk')
           .col-md-4
             +e.logo(href="#")
               img(loading="lazy" src="img/logo.png" alt="")

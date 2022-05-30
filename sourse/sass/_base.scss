@@ -105,43 +105,10 @@ body {
 	// padding-bottom: var(--sTPB);
 	// border-top: 1px solid $gray-310;
 	padding-top: rem(18) !important;
-	&:before{
-		content: '';
-		display: block;
-		height: 12px;
-		transform: skewX(-50deg);
-		width: 95px;
-		background-color: $gray-310;
-
-		margin-bottom: 12px;
-
-		position: absolute;
-		left: 0;
-		top: 0;
-		@include media-breakpoint-up(md){
-			margin-bottom: 19px;
-		}
-	}
-	&::after{
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 10px;
-		height: 1px;
-		
-		width: calc(100% - 10px);
-		background-color: $gray-310;
-
-		margin-bottom: 12px;
-		@include media-breakpoint-up(md){
-			margin-bottom: 14px;
-		}
-	}
-
-	& > *:last-child{
-		margin-bottom: 0;
-	}
+	
+	// & > *:last-child{
+	// 	margin-bottom: 0;
+	// }
 
 	&.long{
 		&:before{
@@ -494,9 +461,10 @@ a{
 	position: absolute;
 	top: 47.5%;
 
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
+	width: 42px;
+	height: 54px;
+	color: $primary;
+	background: #EFF1F2;
 	
 	display: flex;
 	align-items: center;
@@ -511,6 +479,7 @@ a{
 		@include mt();
 		font-size: 18px;
 		color: transparent;
+		fill: none;
 		stroke: $primary;
 	}
 
@@ -525,21 +494,24 @@ a{
 }
 
 .swiper-prev{
-	left: -2%;
+	left: -32px;
 	transform: translateX(-50%) translateY(-50%);
 }
 .swiper-next{
-	right: -2%;
+	right: -32px;
 	transform: translateX(50%) translateY(-50%);
 }
 //
 .headerBlock {
-	.swiper-pagination-bullet {
-		@include media-breakpoint-down(sm){
-			width: 7px;
-			height: 7px;
-		}
-	}
+	// .swiper-pagination-bullet {
+	// 	width: 16px;
+	// 	height: 16px;
+	// 	margin: 0 6px;
+	// 	@include media-breakpoint-down(sm){
+	// 		width: 7px;
+	// 		height: 7px;
+	// 	}
+	// }
 	.swiper-prev,
 	.swiper-next{
 		outline: none!important;
@@ -610,18 +582,18 @@ a{
 
 
 		border-radius: 50%;
-		width: 14px;
-		height: 14px;
+		// width: 14px;
+		// height: 14px;
 		// @include media-breakpoint-up(sm){
 		// 	height: 4px;
 		// }
-		background-color: $white;
+		background-color: $white !important;
 		&-active{
 			background-color: $red;
 		}
-		&:hover{
-			background-color: lighten($primary, 10);
-		}
+		// &:hover{
+		// 	background-color: lighten($primary, 10);
+		// }
 	}
 }
 
@@ -733,7 +705,6 @@ a{
 }
 
 h2{
-	text-transform: uppercase;
 	color: #282828;
 	font-size: 16px;
 	@include media-breakpoint-up(sm){
@@ -842,7 +813,9 @@ body{
 .btn-primary {
 	color: $white;
 	&:hover {
+		background-color: $cyan;
 		color: $white;
+		border-color: $cyan;
 	}
 }
 .btn-outline-primary {
