@@ -7,35 +7,35 @@ mixin sPAcc(data)
 					+e.tab-btn.tabs__btn Профиль
 					+e.tab-btn.tabs__btn.active История заказов
 				.col-lg-9.tabs__wrap
-					+e.info-content.tabs__content
+					+e.info-content.tabs__content.active
 						+e.profile-txt
-							+e.p-title.h3 Учётная запись
+							+e.p-title.h4 Учётная запись
 							+e.p-data
-								+pDataItem('ФИО', 'Иванов Инакентий Игоревич')
+								+pDataItem('ФИО', 'Неретин Николай Игоревич')
 								+pDataItem('Телефон', '+7 (916) 176-05-12')
-								+pDataItem('Почта', 'ivanov.i@gmail.com')
+								+pDataItem('Почта', 'nicolomelodini@gmail.com')
 								+pDataItem('Пароль', '•••••••••••••')
-							+e.change-btn.btn-primary(type="button") Изменить
+							+e.change-btn.btn-outline-primary(type="button") Изменить
 						+e.change-box
 							+form-wrap()
 								+e.inputs
-									+input('', 'text', 'ФИО', 'name', true)(value="Иванов Инакентий Игоревич")
+									+input('', 'text', 'ФИО', 'name', true)(value="Неретин Николай Игоревич")
 									+input('', 'tel', 'Телефон', 'tel', true)(value="79161760512")
-									+input('', 'email', 'Почта', 'mail', true)(value="ivanov.i@gmail.com")
+									+input('', 'email', 'Почта', 'mail', true)(value="nicolomelodini@gmail.com")
 									+input('', 'password', 'Пароль', 'pass', true)(value="1234567890111")
 									+input('', 'password', 'Потвторить пароль', 'pass-repeat', true)(value="1234567890111")
 								+e.btns-row.row
 									.col-sm-6.col-md-auto
-										+e.btn--save.btn-primary(type="submit") Сохранить
-									.col-sm-6.col-md-auto
 										+e.btn--cancel(type="button") Отмена
+									.col-sm-6.col-md-auto
+										+e.btn--save.btn-primary(type="submit") Сохранить
 						+e.profile-txt
 							+e.p-title.h3 Адрес доставки
 							+e.p-data
 								+pDataItem('Город', 'Москва')
 								+pDataItem('Адрес', '1117463, Паустовского, 4')
-							+e.change-btn.btn-outline-primary(type="button") Отмена
-					.tabs__content.active
+							+e.change-btn.btn-outline-primary(type="button") Изменить
+					.tabs__content
 						+pAccOrders()
 
 	// end sPAcc
@@ -47,7 +47,7 @@ mixin pDataItem(name,val)
 
 mixin pAccOrders()
 	+b.pa-orders
-		+e.title.h3 Заказы
+		+e.title.h4 Заказы
 		+e.items.pa-orders-dd-js
 			+pAccOrdersItem()
 			+pAccOrdersItem()

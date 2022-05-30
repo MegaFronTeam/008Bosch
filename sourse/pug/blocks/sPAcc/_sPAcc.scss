@@ -2,12 +2,12 @@
 @use "sass:math";
 
 .sPAcc {
-	--sTPB: 24px;
+	// --sTPB: 24px;
 
 	--sPT: 12px;
 	--sPB: 60px;
 	@include media-breakpoint-up(md){
-		--sPT: 24px;
+		--sPT: 30px;
 		--sPB: 72px;
 	}
 	@include media-breakpoint-up(xl){
@@ -76,28 +76,16 @@
 	}
 	&__tab-btn{
 		@include mt();
-		padding: 14px 20px;
-		min-height: 48px;
-		font-size: 14px;
-		line-height: math.div(17, 14);
+		font-size: 16px;
+		line-height: 1.60em;
 
 		display: flex;
 		align-items: center;
-
-		background-color: $light;
-		border: 1px solid $gray-310;
-		border-top: none;
-		&:first-child{
-			border-top: 1px solid $secondary;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
 		}
-
-		&.active{
-			background-color: $primary;
-			border-color:  $primary;
-			color: $white;
-		}
-		&:first-child {
-			font-weight: 700;
+		&.active, &:hover{
+			color: $primary;
 		}
 	}
 	&__info-content{
@@ -119,38 +107,40 @@
 		}
 	}
 	&__p-title{
-		// font-size: 20px;
-		line-height: (24*0.05);
-		margin-bottom: 24px;
+		line-height: 1.5em;
+		margin-bottom: 14px;
 	}
 	&__p-data{
 		margin-bottom: 26px;
 	}
 	&__pd-row{
 		flex-wrap: nowrap;
-
+		align-items: center;
 		@include roww(20px);
 		& > *{
-			margin-bottom: 12px;
+			margin-bottom: 14px;
 		}
-		margin-bottom: -12px;
+		margin-bottom: -14px;
 		padding-bottom: 12px;
 		&:last-child{
 			padding-bottom: 0;
 		}
 
-		font-size: 14px;
-		line-height: math.div(17, 14);
+		font-size: 16px;
 	}
 
 	--title-width: 96px;
 	&__pd-name{
 		flex-shrink: 0;
 		width: var(--title-width, 96px);
-		color: #4E4E4E;
+		color: #000;
+		line-height: 1.28em;
+		font-size: rem(14);
 	}
 	&__pd-val{
-		color: #4E4E4E;
+		color: #000;
+		line-height: 1.60em;
+		word-break: break-all;
 	}
 	&__change-btn{
 		@extend .btn;
@@ -179,7 +169,7 @@
 			padding-bottom: 24px;
 		}
 		&__input-wrap{
-			margin-bottom: 12px;
+			margin-bottom: 15px;
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -210,6 +200,7 @@
 		&__input{
 			//padding: 15px 20px;
 			padding-right: 50px;
+			border-color: $gray-600;
 		}
 		&__cross-btn{
 			position: absolute;
@@ -243,14 +234,17 @@
 				margin-bottom: 12px;
 			}
 			margin-bottom: -12px;
-
+			@include media-breakpoint-up(md) {
+				margin-left: rem(81);
+				justify-content: space-between;
+			}
 			//padding-bottom: 48px;
 		}
 		&__btn{
 			@extend .btn;
 			min-width: 100%;
 			@include media-breakpoint-up(md){
-				min-width: 262px;
+				min-width: 255px;
 			}
 
 			&--save{
@@ -258,6 +252,9 @@
 			}
 			&--cancel{
 				@extend .btn-outline-primary;
+				@include media-breakpoint-up(md) {
+					min-width: rem(162);
+				}
 			}
 		}
 		&__{}
@@ -268,10 +265,10 @@
 
 .pa-orders{
 	&__title{
-		font-size: 20px;
-		line-height: 1.2;
+		// font-size: 20px;
+		line-height: 1.25em;
 
-		margin-bottom: 20px;
+		margin-bottom: 14px;
 	}
 	&__items{
 
