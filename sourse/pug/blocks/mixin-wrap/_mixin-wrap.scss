@@ -53,6 +53,7 @@
 		.icon {
 			font-size: rem(36);
 			margin-right: rem(8);
+			fill: currentColor;
 		}
 	}
 	&__log-out {
@@ -68,6 +69,7 @@
 		.icon {
 			font-size: rem(15);
 			margin-right: 6px;
+			fill: currentColor;
 		}
 		span {
 			font-size: rem(16);
