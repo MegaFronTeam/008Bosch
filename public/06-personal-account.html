@@ -1238,7 +1238,7 @@
 							</div>
 						</div>
 						<div class="col-lg-9 tabs__wrap">
-							<div class="sPAcc__info-content tabs__content active">
+							<div class="sPAcc__info-content tabs__content">
 								<div class="sPAcc__profile-txt">
 									<div class="sPAcc__p-title h4">Учётная запись
 									</div>
@@ -1350,7 +1350,7 @@
 									</button>
 								</div>
 							</div>
-							<div class="tabs__content">
+							<div class="tabs__content active">
 								<div class="pa-orders">
 									<div class="pa-orders__title h4">Заказы
 									</div>
@@ -1364,17 +1364,14 @@
 															</div>
 															<div class="pa-orders__date-col col-md">12.03.2020
 															</div>
-															<div class="pa-orders__price-col col-md">33 294  ₽
+															<div class="pa-orders__price-col col-md">33 294 ₽
 															</div>
 														</div>
 													</div>
-													<div class="pa-orders__status-col col-auto">В работе
+													<div class="pa-orders__status-col pa-orders__status-col--noPaid col-auto">Не оплачен
 													</div>
 													<div class="col-auto">
 														<div class="pa-orders__chevron">
-															<svg class="icon icon-chevron-down ">
-																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-															</svg>
 														</div>
 													</div>
 												</div>
@@ -1382,96 +1379,60 @@
 											<div class="pa-orders__content dd-content-js">
 												<div class="pa-orders__top-box">
 													<div class="pa-orders__t-row row">
-														<div class="pa-orders__tl-col col-md-auto">
+														<div class="pa-orders__tr-col-12">
+															<div class="pa-orders__t-title pa-orders__t-title--notDelivered">Статус доставки: -
+															</div>
+														</div>
+														<div class="pa-orders__tl-col-12">
 															<div class="pa-orders__t-title">Информация о заказе
 															</div>
 															<div class="pa-orders__t-info">
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Статус заказа
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+																	<div class="pa-orders__ti-val-col text-danger">Не оплачен
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Способ доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, г.Москва,<br>улица Паустовского, 4
+																	<div class="pa-orders__ti-val-col">Почтой России
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Иванов Инакентий Игоревич
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																	<div class="pa-orders__ti-val-col">500 ₽
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Адрес доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">ivanov.i@gmail.com
+																	<div class="pa-orders__ti-val-col">1117463, Москва, Паустовского, 4
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="pa-orders__tr-col col-md">
-															<div class="pa-orders__t-title">Статус доставки
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Контактая информация
 															</div>
-															<div class="pa-orders__t-dates">
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">ФИО получателя
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Доставлен
+																	<div class="pa-orders__ti-val-col">Неретин<br>Николай Игоревич
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Телефон
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
+																	<div class="pa-orders__ti-val-col">+7 (916) 176-05-12
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Почта
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">В пути
-																	</div>
-																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
-																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Отправляем
-																	</div>
-																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
-																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Собираем
+																	<div class="pa-orders__ti-val-col">nicolomelodini@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1479,84 +1440,54 @@
 													</div>
 													<div class="pa-orders__goods">
 														<div class="pa-orders__g-title">
-															<h4>Товары в заказе</h4>
+															<h4>Состав заказа</h4>
 														</div>
 														<div class="pa-orders__g-items">
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																</div>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
+																	</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 1
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
-																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="g-item__amount-col col-auto">× 2
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
 																</div>
-															</div>
-															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 120
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -1568,17 +1499,23 @@
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Товары
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">99
+															<div class="pa-orders__fd-val-col col-auto">3 шт.
 															</div>
 														</div>
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Вес
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">30 кг
+															<div class="pa-orders__fd-val-col col-auto">37 кг
 															</div>
 														</div>
-														<div class="pa-orders__fd-row row text-primary pb-12">
+														<div class="pa-orders__fd-row row text-danger">
 															<div class="pa-orders__fd-key-col col">Скидка
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row text-danger pb-12">
+															<div class="pa-orders__fd-key-col col">Скидка по промокоду
 															</div>
 															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
 															</div>
@@ -1586,7 +1523,7 @@
 														<div class="pa-orders__fd-row row huge-row">
 															<div class="pa-orders__fd-key-col col">ИТОГО
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">33 294  ₽
+															<div class="pa-orders__fd-val-col col-auto">24 600 ₽
 															</div>
 														</div>
 													</div>
@@ -1602,17 +1539,14 @@
 															</div>
 															<div class="pa-orders__date-col col-md">12.03.2020
 															</div>
-															<div class="pa-orders__price-col col-md">33 294  ₽
+															<div class="pa-orders__price-col col-md">33 294 ₽
 															</div>
 														</div>
 													</div>
-													<div class="pa-orders__status-col col-auto">В работе
+													<div class="pa-orders__status-col pa-orders__status-col--noPaid col-auto">Не оплачен
 													</div>
 													<div class="col-auto">
 														<div class="pa-orders__chevron">
-															<svg class="icon icon-chevron-down ">
-																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-															</svg>
 														</div>
 													</div>
 												</div>
@@ -1620,96 +1554,60 @@
 											<div class="pa-orders__content dd-content-js">
 												<div class="pa-orders__top-box">
 													<div class="pa-orders__t-row row">
-														<div class="pa-orders__tl-col col-md-auto">
+														<div class="pa-orders__tr-col-12">
+															<div class="pa-orders__t-title pa-orders__t-title--notDelivered">Статус доставки: -
+															</div>
+														</div>
+														<div class="pa-orders__tl-col-12">
 															<div class="pa-orders__t-title">Информация о заказе
 															</div>
 															<div class="pa-orders__t-info">
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Статус заказа
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+																	<div class="pa-orders__ti-val-col text-danger">Не оплачен
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Способ доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, г.Москва,<br>улица Паустовского, 4
+																	<div class="pa-orders__ti-val-col">Почтой России
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Иванов Инакентий Игоревич
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																	<div class="pa-orders__ti-val-col">500 ₽
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Адрес доставки
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">ivanov.i@gmail.com
+																	<div class="pa-orders__ti-val-col">1117463, Москва, Паустовского, 4
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="pa-orders__tr-col col-md">
-															<div class="pa-orders__t-title">Статус доставки
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Контактая информация
 															</div>
-															<div class="pa-orders__t-dates">
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">ФИО получателя
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Доставлен
+																	<div class="pa-orders__ti-val-col">Неретин<br>Николай Игоревич
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Телефон
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
+																	<div class="pa-orders__ti-val-col">+7 (916) 176-05-12
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Почта
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">В пути
-																	</div>
-																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
-																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Отправляем
-																	</div>
-																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
-																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Собираем
+																	<div class="pa-orders__ti-val-col">nicolomelodini@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1717,84 +1615,54 @@
 													</div>
 													<div class="pa-orders__goods">
 														<div class="pa-orders__g-title">
-															<h4>Товары в заказе</h4>
+															<h4>Состав заказа</h4>
 														</div>
 														<div class="pa-orders__g-items">
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																</div>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
+																	</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 1
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
-																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="g-item__amount-col col-auto">× 2
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
 																</div>
-															</div>
-															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 120
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -1806,17 +1674,23 @@
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Товары
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">99
+															<div class="pa-orders__fd-val-col col-auto">3 шт.
 															</div>
 														</div>
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Вес
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">30 кг
+															<div class="pa-orders__fd-val-col col-auto">37 кг
 															</div>
 														</div>
-														<div class="pa-orders__fd-row row text-primary pb-12">
+														<div class="pa-orders__fd-row row text-danger">
 															<div class="pa-orders__fd-key-col col">Скидка
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row text-danger pb-12">
+															<div class="pa-orders__fd-key-col col">Скидка по промокоду
 															</div>
 															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
 															</div>
@@ -1824,7 +1698,7 @@
 														<div class="pa-orders__fd-row row huge-row">
 															<div class="pa-orders__fd-key-col col">ИТОГО
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">33 294  ₽
+															<div class="pa-orders__fd-val-col col-auto">24 600 ₽
 															</div>
 														</div>
 													</div>
@@ -1840,17 +1714,14 @@
 															</div>
 															<div class="pa-orders__date-col col-md">12.03.2020
 															</div>
-															<div class="pa-orders__price-col col-md">33 294  ₽
+															<div class="pa-orders__price-col col-md">33 294 ₽
 															</div>
 														</div>
 													</div>
-													<div class="pa-orders__status-col col-auto">В работе
+													<div class="pa-orders__status-col col-auto">На доставке
 													</div>
 													<div class="col-auto">
 														<div class="pa-orders__chevron">
-															<svg class="icon icon-chevron-down ">
-																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-															</svg>
 														</div>
 													</div>
 												</div>
@@ -1858,96 +1729,92 @@
 											<div class="pa-orders__content dd-content-js">
 												<div class="pa-orders__top-box">
 													<div class="pa-orders__t-row row">
-														<div class="pa-orders__tl-col col-md-auto">
-															<div class="pa-orders__t-title">Информация о заказе
+														<div class="pa-orders__tr-col-12">
+															<div class="pa-orders__t-title">Статус доставки: Доставлен
 															</div>
-															<div class="pa-orders__t-info">
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+															<div class="pa-orders__t-dates">
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>02.03.2020</span>
+																	<div class="pa-orders__td-status-col">Собираем
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, г.Москва,<br>улица Паустовского, 4
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>03.03.2020</span>
+																	<div class="pa-orders__td-status-col">Отправляем
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Иванов Инакентий Игоревич
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>03.03.2020</span>
+																	<div class="pa-orders__td-status-col">В пути
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>05.03.2020</span>
+																	<div class="pa-orders__td-status-col">Ждёт в магазине
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">ivanov.i@gmail.com
+																</div>
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>06.03.2020</span>
+																	<div class="pa-orders__td-status-col">Доставлен
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="pa-orders__tr-col col-md">
-															<div class="pa-orders__t-title">Статус доставки
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Информация о заказе
 															</div>
-															<div class="pa-orders__t-dates">
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Статус заказа
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Доставлен
+																	<div class="pa-orders__ti-val-col">На доставке
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Способ доставки
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
+																	<div class="pa-orders__ti-val-col">Почтой России
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">В пути
+																	<div class="pa-orders__ti-val-col">500 ₽
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Адрес доставки
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Отправляем
+																	<div class="pa-orders__ti-val-col">1117463, Москва, Паустовского, 4
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+															</div>
+														</div>
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Контактая информация
+															</div>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">ФИО получателя
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Собираем
+																	<div class="pa-orders__ti-val-col">Неретин<br>Николай Игоревич
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Телефон
+																	</div>
+																	<div class="pa-orders__ti-val-col">+7 (916) 176-05-12
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Почта
+																	</div>
+																	<div class="pa-orders__ti-val-col">nicolomelodini@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -1955,84 +1822,54 @@
 													</div>
 													<div class="pa-orders__goods">
 														<div class="pa-orders__g-title">
-															<h4>Товары в заказе</h4>
+															<h4>Состав заказа</h4>
 														</div>
 														<div class="pa-orders__g-items">
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																</div>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
+																	</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 1
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
-																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="g-item__amount-col col-auto">× 2
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
 																</div>
-															</div>
-															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 120
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2044,17 +1881,23 @@
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Товары
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">99
+															<div class="pa-orders__fd-val-col col-auto">3 шт.
 															</div>
 														</div>
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Вес
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">30 кг
+															<div class="pa-orders__fd-val-col col-auto">37 кг
 															</div>
 														</div>
-														<div class="pa-orders__fd-row row text-primary pb-12">
+														<div class="pa-orders__fd-row row text-danger">
 															<div class="pa-orders__fd-key-col col">Скидка
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row text-danger pb-12">
+															<div class="pa-orders__fd-key-col col">Скидка по промокоду
 															</div>
 															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
 															</div>
@@ -2062,7 +1905,214 @@
 														<div class="pa-orders__fd-row row huge-row">
 															<div class="pa-orders__fd-key-col col">ИТОГО
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">33 294  ₽
+															<div class="pa-orders__fd-val-col col-auto">24 600 ₽
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="pa-orders__item">
+											<div class="pa-orders__head dd-head-js">
+												<div class="pa-orders__h-main-row row align-items-center">
+													<div class="col">
+														<div class="pa-orders__h-sub-row row align-items-center">
+															<div class="pa-orders__num-col col-md">Заказ №121212
+															</div>
+															<div class="pa-orders__date-col col-md">12.03.2020
+															</div>
+															<div class="pa-orders__price-col col-md">33 294 ₽
+															</div>
+														</div>
+													</div>
+													<div class="pa-orders__status-col col-auto">На доставке
+													</div>
+													<div class="col-auto">
+														<div class="pa-orders__chevron">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pa-orders__content dd-content-js">
+												<div class="pa-orders__top-box">
+													<div class="pa-orders__t-row row">
+														<div class="pa-orders__tr-col-12">
+															<div class="pa-orders__t-title">Статус доставки: Доставлен
+															</div>
+															<div class="pa-orders__t-dates">
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>02.03.2020</span>
+																	<div class="pa-orders__td-status-col">Собираем
+																	</div>
+																</div>
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>03.03.2020</span>
+																	<div class="pa-orders__td-status-col">Отправляем
+																	</div>
+																</div>
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>03.03.2020</span>
+																	<div class="pa-orders__td-status-col">В пути
+																	</div>
+																</div>
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>05.03.2020</span>
+																	<div class="pa-orders__td-status-col">Ждёт в магазине
+																	</div>
+																</div>
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>06.03.2020</span>
+																	<div class="pa-orders__td-status-col">Доставлен
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Информация о заказе
+															</div>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Статус заказа
+																	</div>
+																	<div class="pa-orders__ti-val-col">На доставке
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Способ доставки
+																	</div>
+																	<div class="pa-orders__ti-val-col">Почтой России
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Стоимость доставки
+																	</div>
+																	<div class="pa-orders__ti-val-col">500 ₽
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Адрес доставки
+																	</div>
+																	<div class="pa-orders__ti-val-col">1117463, Москва, Паустовского, 4
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Контактая информация
+															</div>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">ФИО получателя
+																	</div>
+																	<div class="pa-orders__ti-val-col">Неретин<br>Николай Игоревич
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Телефон
+																	</div>
+																	<div class="pa-orders__ti-val-col">+7 (916) 176-05-12
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Почта
+																	</div>
+																	<div class="pa-orders__ti-val-col">nicolomelodini@gmail.com
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pa-orders__goods">
+														<div class="pa-orders__g-title">
+															<h4>Состав заказа</h4>
+														</div>
+														<div class="pa-orders__g-items">
+															<div class="g-item">
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
+																	</div>
+																</div>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
+																	</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
+																		</div>
+																	</div>
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="g-item">
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
+																	</div>
+																</div>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
+																	</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
+																		</div>
+																	</div>
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="pa-orders__foot">
+													<div class="pa-orders__f-data ms-auto">
+														<div class="pa-orders__fd-row row">
+															<div class="pa-orders__fd-key-col col">Товары
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">3 шт.
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row">
+															<div class="pa-orders__fd-key-col col">Вес
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">37 кг
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row text-danger">
+															<div class="pa-orders__fd-key-col col">Скидка
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row text-danger pb-12">
+															<div class="pa-orders__fd-key-col col">Скидка по промокоду
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row huge-row">
+															<div class="pa-orders__fd-key-col col">ИТОГО
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">24 600 ₽
 															</div>
 														</div>
 													</div>
@@ -2078,17 +2128,14 @@
 															</div>
 															<div class="pa-orders__date-col col-md">12.03.2020
 															</div>
-															<div class="pa-orders__price-col col-md">33 294  ₽
+															<div class="pa-orders__price-col col-md">33 294 ₽
 															</div>
 														</div>
 													</div>
-													<div class="pa-orders__status-col col-auto">В работе
+													<div class="pa-orders__status-col col-auto">Оформлен
 													</div>
 													<div class="col-auto">
 														<div class="pa-orders__chevron">
-															<svg class="icon icon-chevron-down ">
-																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-															</svg>
 														</div>
 													</div>
 												</div>
@@ -2096,96 +2143,92 @@
 											<div class="pa-orders__content dd-content-js active">
 												<div class="pa-orders__top-box">
 													<div class="pa-orders__t-row row">
-														<div class="pa-orders__tl-col col-md-auto">
-															<div class="pa-orders__t-title">Информация о заказе
+														<div class="pa-orders__tr-col-12">
+															<div class="pa-orders__t-title">Статус доставки: Доставлен
 															</div>
-															<div class="pa-orders__t-info">
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Статус заказа
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">На доставке
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Способ доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Почтой России
+															<div class="pa-orders__t-dates">
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>02.03.2020</span>
+																	<div class="pa-orders__td-status-col">Собираем
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Стоимость доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">500 ₽
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Адрес доставки
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">1117463, г.Москва,<br>улица Паустовского, 4
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>03.03.2020</span>
+																	<div class="pa-orders__td-status-col">Отправляем
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">ФИО получателя
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">Иванов Инакентий Игоревич
-																	</div>
-																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Телефон
-																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">+7 (916) 176-05-12
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>03.03.2020</span>
+																	<div class="pa-orders__td-status-col">В пути
 																	</div>
 																</div>
-																<div class="pa-orders__ti-row row">
-																	<div class="pa-orders__ti-key-col col-xl-auto">Почта
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>05.03.2020</span>
+																	<div class="pa-orders__td-status-col">Ждёт в магазине
 																	</div>
-																	<div class="pa-orders__ti-val-col col-xl">ivanov.i@gmail.com
+																</div>
+																<div class="pa-orders__delivery-item">
+																	<div class="pa-orders__td-ball">
+																	</div><span>06.03.2020</span>
+																	<div class="pa-orders__td-status-col">Доставлен
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="pa-orders__tr-col col-md">
-															<div class="pa-orders__t-title">Статус доставки
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Информация о заказе
 															</div>
-															<div class="pa-orders__t-dates">
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Статус заказа
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Доставлен
+																	<div class="pa-orders__ti-val-col">На доставке
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball active">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Способ доставки
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Ждёт в магазине
+																	<div class="pa-orders__ti-val-col">Почтой России
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Стоимость доставки
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">В пути
+																	<div class="pa-orders__ti-val-col">500 ₽
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Адрес доставки
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Отправляем
+																	<div class="pa-orders__ti-val-col">1117463, Москва, Паустовского, 4
 																	</div>
 																</div>
-																<div class="pa-orders__td-row row">
-																	<div class="pa-orders__td-date-col col-xl-auto">
-																		<div class="pa-orders__td-ball">
-																		</div><span>02.03.2020</span>
+															</div>
+														</div>
+														<div class="pa-orders__tl-col-12">
+															<div class="pa-orders__t-title">Контактая информация
+															</div>
+															<div class="pa-orders__t-info">
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">ФИО получателя
 																	</div>
-																	<div class="pa-orders__td-status-col col-xl">Собираем
+																	<div class="pa-orders__ti-val-col">Неретин<br>Николай Игоревич
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Телефон
+																	</div>
+																	<div class="pa-orders__ti-val-col">+7 (916) 176-05-12
+																	</div>
+																</div>
+																<div class="pa-orders__info-item">
+																	<div class="pa-orders__ti-key-col">Почта
+																	</div>
+																	<div class="pa-orders__ti-val-col">nicolomelodini@gmail.com
 																	</div>
 																</div>
 															</div>
@@ -2193,84 +2236,54 @@
 													</div>
 													<div class="pa-orders__goods">
 														<div class="pa-orders__g-title">
-															<h4>Товары в заказе</h4>
+															<h4>Состав заказа</h4>
 														</div>
 														<div class="pa-orders__g-items">
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																</div>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
+																	</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 1
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
-																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="g-item__amount-col col-auto">× 2
+																<div class="g-item__img"><img loading="lazy" src="img/@2x/card-img-1.png" alt=""/>
+																</div>
+																<div class="g-item__info-wrap">
+																	<div class="g-item__product-head"><a href="#">GBH 36 V-LI PLUS</a>
+																		<p>Клеевой пистолет</p>
 																	</div>
 																</div>
-															</div>
-															<div class="g-item">
-																<div class="g-item__row row align-items-center">
-																	<div class="g-item__img-col col-auto">
-																		<a class="g-item__img" href="#" target="_blank"><img loading="lazy" src="img/@2x/category-7.png" alt=""/>
-																		</a>
+																<div class="g-item__price-wrap">
+																	<div class="g-item__discount">-10%
 																	</div>
-																	<div class="g-item__col-with-row col">
-																		<div class="g-item__inner-row row align-items-center">
-																			<div class="g-item__txt-col col-md">
-																				<a class="g-item__title" href="#" target="_blank">Шуруповерт с 6 положениями регулировки
-																				</a>
-																				<div class="g-item__code">FS2700
-																				</div>
-																			</div>
-																			<div class="col-md-auto">
-																				<div class="g-item__price g-item__price--old">18 500 ₽
-																				</div>
-																				<div class="g-item__price g-item__price--new">16 500 ₽
-																				</div>
-																			</div>
+																	<div class="g-item__price-col">
+																		<div class="g-item__price g-item__price--new">24 600 ₽
+																		</div>
+																		<div class="g-item__price g-item__price--old">28 400 ₽
 																		</div>
 																	</div>
-																	<div class="g-item__amount-col col-auto">× 120
+																	<div class="g-item__value">
+																		<p>Кол-во</p>
+																		<div class="g-item__amount-col">100 шт.
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -2282,17 +2295,23 @@
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Товары
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">99
+															<div class="pa-orders__fd-val-col col-auto">3 шт.
 															</div>
 														</div>
 														<div class="pa-orders__fd-row row">
 															<div class="pa-orders__fd-key-col col">Вес
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">30 кг
+															<div class="pa-orders__fd-val-col col-auto">37 кг
 															</div>
 														</div>
-														<div class="pa-orders__fd-row row text-primary pb-12">
+														<div class="pa-orders__fd-row row text-danger">
 															<div class="pa-orders__fd-key-col col">Скидка
+															</div>
+															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
+															</div>
+														</div>
+														<div class="pa-orders__fd-row row text-danger pb-12">
+															<div class="pa-orders__fd-key-col col">Скидка по промокоду
 															</div>
 															<div class="pa-orders__fd-val-col col-auto">-11 890 ₽
 															</div>
@@ -2300,7 +2319,7 @@
 														<div class="pa-orders__fd-row row huge-row">
 															<div class="pa-orders__fd-key-col col">ИТОГО
 															</div>
-															<div class="pa-orders__fd-val-col col-auto">33 294  ₽
+															<div class="pa-orders__fd-val-col col-auto">24 600 ₽
 															</div>
 														</div>
 													</div>
