@@ -40,16 +40,29 @@
 		}
 
 	&__row{
+		--bs-gutter-y: 30px;
 		margin-bottom: rem(60);
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(30);
+			--bs-gutter-y: 15px;
+		}
 	}
 	&__news-item {
-		position: relative;
-		display: block;
+		overflow: hidden;
+		&:hover {
+			.sArticals__img-wrap {
+				&:after{
+					background: linear-gradient(180deg, rgba(0, 99, 154, 0) 0%, rgba(0, 99, 154, 0.7) 100%);
+				}
+			}
+		}
 	}
 	&__img-wrap{
-		display: inline-block;
-		@extend .accept-ratio-frame-nh;
-		padding-top: math.div(220, 360) * 100%;
+		position: relative;
+		display: flex;
+		height: 340px;
+		padding-top: 60px;
+		overflow: hidden;
 		&:after{
 			@include mt();
 			content: '';
@@ -61,23 +74,30 @@
 			height: 100%;
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 			color: $white;
+			z-index: -1;
 		}
-		&:hover{
-			&:after{
-				background: linear-gradient(180deg, rgba(0, 99, 154, 0) 0%, rgba(0, 99, 154, 0.7) 100%);
-			}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			z-index: -2;
 		}
 	}
 	&__text-wrap {
-		padding: 30px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		max-height: 75%;
-		overflow: hidden;
+		margin-top: auto;
 		color: $white;
-		z-index: 10;
-		pointer-events: none;
+		padding: 10px;
+		@include media-breakpoint-up(xl) {
+			// position: absolute;
+			padding: 30px;
+			// bottom: 0;
+			// left: 0;
+			// max-height: 75%;
+			color: $white;
+			z-index: 10;
+			// pointer-events: none;
+		}
 	}
 	&__title{
 		display: inline-block;
@@ -85,6 +105,19 @@
 		max-width: 80%;
 		font-size: rem(24);
 		line-height: 125%;
+		color: $white;
+		// @include media-breakpoint-down(xl) {
+		// 	position: absolute;
+		// 	padding: 20px;
+		// 	top: 30%;
+		// 	left: 0;
+		// 	color: $white;
+		// 	z-index: 10;
+		// 	pointer-events: none;
+		// }
+		@include media-breakpoint-down(md) {
+			font-size: rem(18);
+		}
 	}
 	&__tag {
 		position: absolute;
@@ -96,9 +129,16 @@
 		color: $white;
 		background-color: $primary;
 		z-index: 10;
+		@include media-breakpoint-down(md) {
+			top: 10px;
+			left: 10px;
+		}
 	}
 	&__descr {
 		line-height: 140%;
+		@include media-breakpoint-down(md) {
+			font-size: rem(14);
+		}
 	}
 	&__more {
 		color: $blue;

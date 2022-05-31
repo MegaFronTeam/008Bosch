@@ -26,35 +26,37 @@ mixin topLine()
 				+e.logo-col.col-auto
 					+e.logo(href="#")
 						img(loading="lazy" src="img/logo.png" alt="")
-				+e.search-col.col-auto
+				+e.search-col.col
 					+e.search.search-btn-js.muted-down-md
 						+e.search-txt.d-none.d-xl-block Поисковой запрос
 						+icon('zoom')
 						+searchDD()
-				.col-auto
-					+e.dd-btn--lc
-						+e.user
-							+icon('user')
+				+e.dd-btn--lc.col-auto
+					+e.icon-link
+						+icon('user')
 						span Войти
 						+lcDD()
 				+e.item.col-auto
 					+e.icon-link(href='#')
 						+icon('bars')
-					span Сравнение
+						span Сравнение
 				+e.item.col-auto
 					+e.icon-link(href='#')
 						+icon('bookmarks')
-					span Избранное
+						span Избранное
 				+e.item.col-auto
-					+e.cart(href='#')
-						+e.cart-icon
-							+icon('cart')
+					+e.icon-link(href='#')
+						+icon('cart')
 							//- +e.number 99
-						+e.cart-txt Корзина
+						span Корзина
 mixin cityDD()
 	+b.city-dd
 		+e.search-row.row
 			.col
+				+e.location
+						+icon('location')
+						span Москва
+						+icon('chevron-down')
 				+input('', 'text', 'Выбирете свой город', 'city')
 			.col-auto
 				+e.BUTTON.btn(type="button") Искать
@@ -116,16 +118,13 @@ mixin searchDD()
 			.col-auto
 				+e.BUTTON.btn(type="button") Найти
 			+e.items-row.row
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-4
 					+item-prod('1', false, 'VB3616DA')
 						+e.badge.bg-red Новинка
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-4
 					+item-prod('1', false, 'VB3616DA')
 						+e.badge.bg-red Новинка
-				.col-sm-6.col-lg-3
-					+item-prod('1', false, 'VB3616DA')
-						+e.badge.bg-red Новинка
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-4
 					+item-prod('1', false, 'VB3616DA')
 						+e.badge.bg-red Новинка
 

@@ -13,7 +13,7 @@ mixin sNewsBox(data)
 	// end sNewsBox
 
 mixin NewsBoxItem(img,date, title,descr)
-	.col.col-md-6.col-lg-4
+	.col-12.col-sm-6.col-lg-4
 		+e.item(href="#")
 			+e.img-wrap
 				img(loading="lazy" src=`img/@2x/news-${img}.jpg` alt="")

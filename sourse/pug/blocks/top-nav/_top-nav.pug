@@ -130,25 +130,47 @@ mixin top-nav()
 
 mixin catalogDD()
 	+b.catalog-dd
-		ul.catalog-dd__list
-			li
-				span Аккумуляторный инструмент
-				+catalogSubDD()
-			li
-				span Сетевой электроинструмент
-				+catalogSubDD('11')
-			li
-				span Садовая техника
-				+catalogSubDD('22')
-			li
-				span Алмазная резка
-				+catalogSubDD('33')
-			li
-				span Ручной инструмент
-				+catalogSubDD('44')
-			li
-				span Аксессуары
-				+catalogSubDD('55')
+		.row.catalog-dd__list.UL
+			.col-4.LI
+				a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Аккумуляторные инструменты
+			.col-4.LI
+					a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Инструменты с функцией Connectivity и Bluetooth-модули
+			.col-4.LI
+				a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Дрели, ударные дрели и шуруповерты
+			.col-4.LI
+				a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Перфораторы и отбойные молотки
+			.col-4.LI
+				a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Аккумуляторные инструменты
+			.col-4.LI
+					a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Инструменты с функцией Connectivity и Bluetooth-модули
+			.col-4.LI
+				a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Дрели, ударные дрели и шуруповерты
+			.col-4.LI
+				a(href="#")
+					+e.img-wrap
+						img(loading="lazy" src="img/" alt="")
+					+e.title Перфораторы и отбойные молотки
 
 mixin catalogSubDD(diff="")
 	+e.sub-dd

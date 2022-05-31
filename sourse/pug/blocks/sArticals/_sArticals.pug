@@ -5,21 +5,21 @@ mixin sArticals()
 			+b.section-title
 				h2 Статьи
 			+e.row.row
-				+itemNews("1",'Доверяйте ремонт техники только профессионалам Bosch', 'Все заказы бытовой техники, оформленные в марте, будут доставлены на первой или второй неделе апреля по ранее согласованной и оплаченной стоимости. Надеемся на ваше понимание!', 'col col-md-6')
-				+itemNews("2",'Избавтесь от&nbsp;пыли чтобы, не&nbsp;вдыхать&nbsp;её', 'Способы удаления пыли для более легкой и безопасной работы', 'col col-md-6')
+				+itemNews("1",'Доверяйте ремонт техники только профессионалам Bosch', 'Все заказы бытовой техники, оформленные в марте, будут доставлены на первой или второй неделе апреля по ранее согласованной и оплаченной стоимости. Надеемся на ваше понимание!', 'col-12 col-md-6')
+				+itemNews("2",'Избавтесь от&nbsp;пыли чтобы, не&nbsp;вдыхать&nbsp;её', 'Способы удаления пыли для более легкой и безопасной работы', 'col-12 col-md-6')
 			+e.btn-wrap
 				+btn('Все статьи').btn.btn-outline-primary
 	// end sArticals
 
-mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col col-md-6')
+mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-12 col-md-6')
 	+e.col(class=bootClasses)&attributes(attributes)
 		+e.news-item(href="#")
-			+e.tag Измерительная техника
 			+e.img-wrap.DIV
+				+e.tag Измерительная техника
 				img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
-			+e.text-wrap
-				+e.title!= t
-				+e.descr!= descr
+				+e.text-wrap
+					+e.title!= t
+					+e.descr!= descr
 
 mixin sArticalsPage()
 	// start sArticals
