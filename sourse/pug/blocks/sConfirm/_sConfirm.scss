@@ -24,12 +24,12 @@
 	}
 	&__wrap {
 		margin-bottom: rem(25);
-		&:last-child {
-			margin-bottom: rem(58);
-		}
 		h4 {
 			margin-bottom: rem(0);
 			line-height: 1.25;
+		}
+		&--indent {
+			margin-bottom: rem(58);
 		}
 	}
 	p {
