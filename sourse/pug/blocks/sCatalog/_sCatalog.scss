@@ -115,9 +115,16 @@
 	}
 
 	&.sCatalog--familiar{
+		padding-bottom: 0;
+		h2 {
+			font-size: rem(24);
+		}
+		.prod-item__box {
+			min-height: rem(69);
+		}
 		.sCatalog__slide{
 			@include media-breakpoint-up(lg){
-				width: calc((100% / 4) - (30px * 2 / 4))!important;
+				width: calc((100% / 3) - (30px * 2 / 3))!important;
 				max-width: rem(262);
 			}
 		}
