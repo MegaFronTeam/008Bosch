@@ -459,7 +459,7 @@ a{
 .swiper-next{
 	outline: none!important;
 	position: absolute;
-	top: 47.5%;
+	top: 50%;
 
 	width: 42px;
 	height: 54px;
@@ -477,7 +477,7 @@ a{
 	}
 	.icon{
 		@include mt();
-		font-size: 18px;
+		font-size: 24px;
 		color: transparent;
 		fill: none;
 		stroke: $primary;
@@ -494,11 +494,11 @@ a{
 }
 
 .swiper-prev{
-	left: -32px;
+	left: -38px;
 	transform: translateX(-50%) translateY(-50%);
 }
 .swiper-next{
-	right: -32px;
+	right: -38px;
 	transform: translateX(50%) translateY(-50%);
 }
 //

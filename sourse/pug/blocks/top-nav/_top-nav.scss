@@ -1,6 +1,9 @@
 @use "sass:math";
 
 .top-nav {
+	position: relative;
+	padding-bottom: 5px;
+	font-weight: 300;
 	
 	&__container{
 		padding-top: 14px;
@@ -13,24 +16,31 @@
 			padding-top: 0;
 			padding-bottom: 0;
 		}
-		position: relative;
+		// position: relative;
 	}
 	&__burger-col{
 		--burger-bar-col: #{$primary};
 	}
 
 	//
-	
+	&__logo {
+		width: auto;
+		margin-left: auto;
+	}
 	&__menu{
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		display: flex;
 		height: 100%;
+		align-items: center;
 	}
 	
 	&__item{
-		margin: 0 19px;
+		margin: 0 15px;
+		&:first-child {
+			margin-left: 0;
+		}
 		&:last-child{
 			margin-right: 0;
 		}
@@ -43,7 +53,7 @@
 			--burger-bar-col: #{$white};
 			--link-bef-o: 1;
 			& > .top-nav__link{
-				color: $white!important;
+				color: $blue!important;
 			}
 		}
 	}
@@ -54,19 +64,22 @@
 
 		position: relative;
 		z-index: 1;
-		&:before{
-			@include mt();
-			opacity: var(--link-bef-o);
-			background-color: $primary;
-			content: '';
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: calc(100% + 24px);
-			height: 100%;
+		&--catalog {
+			color: $blue;
 		}
+		// &:before{
+		// 	@include mt();
+		// 	opacity: var(--link-bef-o);
+		// 	background-color: $primary;
+		// 	content: '';
+		// 	position: absolute;
+		// 	z-index: -1;
+		// 	top: 0;
+		// 	left: 50%;
+		// 	transform: translateX(-50%);
+		// 	width: calc(100% + 24px);
+		// 	height: 100%;
+		// }
 
 
 		display: flex;
@@ -127,8 +140,9 @@
 	cursor: pointer;
 	@include mt();
 	width: 20px;
-	height: 20px;
+	height: 27px;
 	position: relative;
+	color: $blue;
 
 	span,
 	span:before,
@@ -139,8 +153,8 @@
 		display: block;
 		content: '';
 		width: 20px;
-		height: 2px;
-		background-color: var(--burger-bar-col, #{$black});
+		height: 1px;
+		background-color: $blue;
 	}
 
 	span{
@@ -148,10 +162,10 @@
 		transform: translateY(-50%);
 	}
 	span:before{
-		top: -5px;
+		top: -7px;
 	}
 	span:after{
-		top: 5px;
+		top: 7px;
 	}
 
 	&.active{
@@ -209,6 +223,7 @@
 		font-size: 16px;
 		line-height: math.div(19, 16);
 	}
+	
 	&__menu{
 		list-style: none;
 		padding: 0;
@@ -230,6 +245,7 @@
 			display: block;
 		}
 	}
+	
 	&__back-link{
 		justify-content: flex-start!important;
 
@@ -331,11 +347,20 @@
 	&__cart{
 		//padding: 6px 0;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		color: $primary;
 		&:hover{
 			color: rgba($primary, .9);
 		}
+		.icon {
+			margin-right: 8px;
+			color: $body-color;
+		}
+	}
+
+	.icon-star {
+		fill: none;
+		stroke: $body-color;
 	}
 	
 	&__number{
@@ -361,6 +386,7 @@
 	}
 	
 	&__il-txt{
+		display: inline-block;
 		font-size: 14px;
 		line-height: 1.4;
 		color: $body-color;
@@ -368,10 +394,10 @@
 	&__icon-box{
 		width: 28px;
 		margin-right: 8px;
-		
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: inline-block;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
 		.icon-user {
 			font-size: 28px;
 		}
