@@ -2,7 +2,7 @@
 .sContact {
 	--sPT: 0;
 	@include media-breakpoint-up(md){
-		--sPT: 0;
+		--sPT: #{rem(30)};
 		--sPB: 18px;
 	}
 	@include media-breakpoint-up(xl){
@@ -29,20 +29,27 @@
 		}
 	}
 	.section-title{
-		margin-top: rem(71);
+		// margin-top: rem(71);
 	}
 	&__row{
-
-		@include media-breakpoint-up(lg){
-			@include roww(30px);
-
-			& > *{
-				margin-bottom: 36.5px;
-			}
-			margin-bottom: -36.5px;
+		--bs-gutter-y: #{rem(30)};
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
 		}
+		// @include media-breakpoint-up(lg){
+		// 	@include roww(30px);
+
+		// 	& > *{
+		// 		margin-bottom: 36.5px;
+		// 	}
+		// 	margin-bottom: -36.5px;
+		// }
 	}
 	&__item{
+		&:not(:last-child) {
+			margin-bottom: rem(28);
+		}
 		&.map-inside{
 			min-height: 100%;
 
@@ -56,8 +63,8 @@
 		}
 	}
 	&__header{
-		color: #4E4E4E;
-		margin-bottom: rem(18);
+		color: #000;
+		margin-bottom: rem(14);
 	}
 	//
 	&__table{
@@ -67,26 +74,41 @@
 				width: rem(147);
 			}
 		}
+		&--row {
+			display: flex;
+			.sContact__tab-row {
+				margin-bottom: 0 !important;
+			}
+		}
+		&--props {
+			.sContact__tab-row {
+				&:not(:last-child) {
+					margin-bottom: rem(5);
+				}
+			}
+
+		}
 	}
 	&__tab-row{
 		display: flex;
 		@include roww(0);
 		&:not(:last-child) {
-			margin-bottom: rem(8);
+			margin-bottom: rem(14);
 		}
-		& > *{
-			font-size: 12px;
-			@include media-breakpoint-up(md){
-				font-size: 14px;
-			}
-		}
+		// & > *{
+		// 	font-size: 12px;
+		// 	@include media-breakpoint-up(md){
+		// 		font-size: 14px;
+		// 	}
+		// }
 	}
 	&__gray-col{
-		margin-right: 10px;
-		color: #949494;
+		font-size: 12px;
+		color: #000;
 	}
 	&__white-col{
-		color: #4E4E4E;
+		color: #000;
+		font-size: 16px;
 	}
 	//
 	&__map{

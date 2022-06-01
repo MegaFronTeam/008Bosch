@@ -4,3 +4,6 @@
 4. <https://megafronteam.github.io/008Bosch/public/05-order-2.html>
 5. <https://megafronteam.github.io/008Bosch/public/05-order-3.html>
 6. <https://megafronteam.github.io/008Bosch/public/06-personal-account.html>
+7. <https://megafronteam.github.io/008Bosch/public/07-compare.html>
+8. <https://megafronteam.github.io/008Bosch/public/09-contacts.html>
+9. <https://megafronteam.github.io/008Bosch/public/010-news.html>

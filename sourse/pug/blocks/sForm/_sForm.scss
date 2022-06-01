@@ -2,24 +2,26 @@
 @use "sass:math";
 
 .sForm {
-	--sPB: 60px;
-	--sTPB: 24px;
-	@include media-breakpoint-up(md){
-		--sPB: 72px;
-		--sTPB: 36px;
-	}
-	@include media-breakpoint-up(xl){
-		--sPB: 120px;
-		--sTPB: 0px;
-	}
+	--sPB: 0;
+	--sPT: 0;
+	// --sTPB: 24px;
+	// @include media-breakpoint-up(md){
+	// 	--sPB: 72px;
+	// 	--sTPB: 36px;
+	// }
+	// @include media-breakpoint-up(xl){
+	// 	--sPB: 120px;
+	// 	--sTPB: 0px;
+	// }
 	//
 	.section-title{
-		&:before{
-			margin-bottom: 20px;
-		}
-		h2{
-			font-size: 20px;
-			font-weight: bold;
+		// &:before{
+		// 	margin-bottom: 20px;
+		// }
+		h4{
+			margin-bottom: rem(14);
+			// font-size: 20px;
+			// font-weight: bold;
 		}
 	}
 	
@@ -101,7 +103,7 @@
 		&__btn{
 			font-size: 16px;
 			width: 100%;
-			max-width: rem(222);
+			max-width: rem(255);
 		}
 		&__wrap {
 			display: flex;

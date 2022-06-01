@@ -11,33 +11,36 @@ mixin sArticals()
 				+btn('Все статьи').btn.btn-outline-primary
 	// end sArticals
 
-mixin itemNews(i ,t="Заголовок SEO текста",descr="Позаботьтесь о тепле и безопасности с принадлежностями для работы  с цепной пилой", bootClasses='col-12 col-md-6')
+mixin itemNews(i ,t="Всего один CLICK!",descr="Все заказы бытовой техники, оформленные в&nbsp;марте, будут доставлены на&nbsp;первой или второй неделе апреля по&nbsp;ранее согласованной и&nbsp;оплаченной стоимости. Надеемся на&nbsp;ваше понимание!", bootClasses='col-12 col-md-6 col-lg-4')
 	+e.col(class=bootClasses)&attributes(attributes)
 		+e.news-item(href="#")
 			+e.img-wrap.DIV
-				+e.tag Измерительная техника
+				//- +e.tag Измерительная техника
 				img(loading="lazy" src=`img/@2x/artical-${i}.jpg` alt="")
-				+e.text-wrap
-					+e.title!= t
-					+e.descr!= descr
+			+e.text-wrap
+				+e.date 12.05.2022
+				+e.title!= t
+				+e.descr!= descr
+				+e.read Читать
+					+icon('chevron-right')
 
 mixin sArticalsPage()
 	// start sArticals
 	+b.sArticals--page.section#sArticals&attributes(attributes)
 		.container
-			+e.image-wrap
-				+pic('news-bg.jpg', 'bg', 0)
-				+e.head-title новости
+			//- +e.image-wrap
+			//- 	+pic('news-bg.jpg', 'bg', 0)
+			//- 	+e.head-title новости
 			+e.row.row
-				+itemNews("1")
+				+itemNews("4")
+				+itemNews("5", 'Все данные в одном формате', 'MeasureOn&nbsp;&mdash; приложение для простого документирования поэтажных планов помещений, результатов измерений, фотографий и&nbsp;заметок прямо на&nbsp;рабочей площадке.')
+				+itemNews("6", 'Созданы для работы<br>по дереву')
+				+itemNews("7")
+				+itemNews("6", 'Все данные в одном формате', 'MeasureOn&nbsp;&mdash; приложение для простого документирования поэтажных планов помещений, результатов измерений, фотографий и&nbsp;заметок прямо на&nbsp;рабочей площадке.')
+				+itemNews("8", 'Созданы для работы<br>по дереву')
 				+itemNews("2")
-				+itemNews("3")
-				+itemNews("1")
-				+itemNews("2")
-				+itemNews("3")
-				+itemNews("1")
-				+itemNews("2")
-				+itemNews("3")(class="d-none d-lg-block")
-			.text-center
-				+e.BUTTON.plus-btn(type='button')
-					+icon('plus')
+				+itemNews("1", 'Все данные в одном формате', 'MeasureOn&nbsp;&mdash; приложение для простого документирования поэтажных планов помещений, результатов измерений, фотографий и&nbsp;заметок прямо на&nbsp;рабочей площадке.')
+				+itemNews("8", 'Созданы для работы<br>по дереву')
+			//- .text-center
+			//- 	+e.BUTTON.plus-btn(type='button')
+			//- 		+icon('plus')
