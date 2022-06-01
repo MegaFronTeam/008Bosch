@@ -2,9 +2,10 @@
 @use "sass:math";
 
 .sCatalog {
-	padding-top: 64px;
+	padding-top: 0;
+	padding-bottom: 45px;
 	.section-title {
-		padding-bottom: 29px;
+		padding-bottom: 15px !important;
 	}
 	&.sCatalog--also{
 		.sCatalog__slide{
@@ -138,8 +139,8 @@
 	
 	&__links {
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		top: 22px;
+		right: 22px;
 		z-index: 10;
 		@include media-breakpoint-down(sm) {
 			top: 5px;
@@ -155,6 +156,9 @@
 			}
 		}
 		
+	}
+	&__compare {
+		margin-right: 10px;
 	}
 	&__compare--active,
 	&__bookmarks--active {
@@ -192,7 +196,6 @@
 		font-size: 16px;
 		line-height: 160%;
 		color: $primary;
-		margin-bottom: 5px;
 	}
 	&__title {
 		display: block;
@@ -221,6 +224,7 @@
 	}
 	
 	&__price--new {
+		margin-bottom: 10px;
 		font-size: 24px;
 		white-space: nowrap;
 	}
@@ -267,6 +271,7 @@
 		display: flex;
 		justify-content: center;
 		margin-left: rem(5);
+		font-size: rem(18);
 
 		.icon {
 			font-size: rem(18);

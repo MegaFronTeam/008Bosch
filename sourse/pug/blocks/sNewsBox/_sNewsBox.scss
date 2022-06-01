@@ -2,9 +2,14 @@
 @use "sass:math";
 
 .sNewsBox {
+	padding-top: 25px;
+	padding-bottom: rem(60);
 	.row {
 		--bs-gutter-y: 30px;
-		margin-bottom: rem(60);
+		margin-bottom: rem(52);
+	}
+	h2 {
+		margin-bottom: rem(24)
 	}
 	&__item{
 		display: flex;
@@ -62,5 +67,11 @@
 	}
 	&__btn-wrap {
 		text-align: center;
+	}
+	&__btn {
+		@extend .btn;
+		@extend .btn-outline-primary;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 } // end.sNewsBox
