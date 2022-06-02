@@ -9,3 +9,4 @@
 9. <https://megafronteam.github.io/008Bosch/public/010-news.html>
 10. <https://megafronteam.github.io/008Bosch/public/011-article.html>
 11. <https://megafronteam.github.io/008Bosch/public/012-promotion.html>
+12. <https://megafronteam.github.io/008Bosch/public/013-payment-and-delivery.html>
