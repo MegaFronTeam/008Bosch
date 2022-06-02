@@ -8,14 +8,14 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sArticals/_sArticals.pug
 include ../blocks/sNewsBox/_sNewsBox.pug
 include ../blocks/sSeo/_sSeo.pug
-include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sPromotion/_sPromotion.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= '011-article'
+	- let  title= '012-promotion'
 	title= title
 block pagecontent
 	//-+mob-mnu()
@@ -23,6 +23,6 @@ block pagecontent
 	+topLine()
 	+top-nav()
 	//open news page
-	+page-head('', '', '', 'Главная', 'Новости', 'Позаботьтесь о тепле и безопасности с принадлежностями для работы с цепной пилой').--article
-	+sArticle()
+	+page-head('Акции', '', '', 'Главная', 'Акции')
+	+sPromotion()
 	+footer()
