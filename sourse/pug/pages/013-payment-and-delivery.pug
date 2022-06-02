@@ -8,23 +8,21 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sArticals/_sArticals.pug
 include ../blocks/sNewsBox/_sNewsBox.pug
 include ../blocks/sSeo/_sSeo.pug
+include ../blocks/sPromotion/_sPromotion.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= 'title'
+	- let  title= '013-payment-and-delivery'
 	title= title
 block pagecontent
 	//-+mob-mnu()
 	+header()
 	+topLine()
 	+top-nav()
-	+headerBlock()
-	+sCatalogHit()
-	+sCatalogNew()
-	+sArticals()
-	+sNewsBox('true')
-	+sSeo()
+	//open news page
+	+page-head('Олата и доставка', '', '', 'Главная', 'Новости')
+	+sContent()
 	+footer()
