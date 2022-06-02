@@ -60,6 +60,10 @@
 			fill: currentColor;
 		}
 	}
+	&__descr {
+		font-size: 12px;
+		line-height: 160%;
+	}
 	&__log-out {
 		position: absolute;
 		top: 62%;
@@ -82,8 +86,18 @@
 		}
 	}
 	&--catalog {
+		margin-bottom: 24px;
+		padding-bottom: rem(17);
+		border-bottom: 1px solid $gray-400;
 		.breadcrumb {
 			padding-bottom: 0;
+		}
+	}
+	&--subcatalog {
+		margin-bottom: 24px;
+		.page-head__title {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 	&--order {

@@ -7,40 +7,29 @@ mixin sCatalogPage(data)
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							+e.header Инструменты
+							+e.header Каталог
 								+icon('chevron-down')
 							+e.items
-								+asideItem('Цепные пилы')
-								+asideItem('Пылесосы')
-								+asideItem('Кусторезы')
-								+asideItem('Триммеры и травокосилки')
-								+asideItem('Рубанки')
-								+asideItem('Строительные фены')
+								+asideItem('Аккумуляторные инструменты')
+								+asideItem('Инструменты с функцией Connectivity и Bluetooth-модули')
+								+asideItem('Система 18 В')
+								+asideItem('Дрели-шуруповерты')
+								+asideItem('Ударные дрели-шуруповерты')
 				.col-lg-9
-					h1 Каталог
-					+e.row.row.pb-48.pb-md-60
-						+catalogPageItem(1, 'Цепные пилы')
-						+catalogPageItem(2, 'Пылесосы')
-						+catalogPageItem(3, 'Кусторезы')
-						+catalogPageItem(4, 'Триммеры и травокосилки')
-						+catalogPageItem(5, 'Рубанки')
-						+catalogPageItem(6, 'Рубанки')
-						+catalogPageItem(7, 'Рубанки')
-						+catalogPageItem(8, 'Рубанки')
-						+catalogPageItem(9, 'Строительные фены')
-						//-+catalogPageItem(2, 'MultiVolt')
-						//-+catalogPageItem(3, 'Сетевой электроинструмент')
-						//-+catalogPageItem(4, 'Аккумуляторный инструмент')
-			+b.sSeo#sSeo
-				h2 Заголовок SEO текста
-				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+					+e.row.row
+						+catalogPageItem(1, 'Инструменты с функцией Connectivity и Bluetooth-модули')
+						+catalogPageItem(2, 'Дрели, ударные дрели и шуруповерты')
+						+catalogPageItem(3, 'Перфораторы и отбойные молотки')
+						+catalogPageItem(4, 'Угловые шлифмашины и металлообработка')
+						+catalogPageItem(5, 'Стационарные инструменты и столы')
+						+catalogPageItem(6, 'Шлифмашины и рубанки')
 	// end sCatalogPage
 
 mixin catalogPageItem(imgNum, name, bootClasses="")
 	.col-md-6.col-lg-4(class=bootClasses)
 		+e.item(href='#')
 			+e.img-wrap
-				img(loading="lazy" src=`img/@2x/catalog-${imgNum}.jpg` alt="")
+				img(loading="lazy" src=`img/@2x/catalog-${imgNum}.png` alt="")
 			+e.i-name=name
 
 mixin sCatalogPage2(data)
@@ -52,52 +41,39 @@ mixin sCatalogPage2(data)
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							+e.header Инструменты
+							+e.header Каталог
 								+icon('chevron-down')
 							+e.items
+								+asideItem('Аккумуляторные инструменты')
+								+asideItem('Инструменты с функцией Connectivity и Bluetooth-модули')
+								+asideItem('Система 18 В')
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
-								+asideItem('Ударные шуруповерты')
 				.col-lg-9
-					h2 Инструменты
-					+e.row.row.pb-48.pb-md-60
-						+catalogPageItem(1, 'Цепные пилы')
-						+catalogPageItem(2, 'Пылесосы')
-						+catalogPageItem(3, 'Кусторезы')
-						+catalogPageItem(4, 'Триммеры и травокосилки')
-						+catalogPageItem(5, 'Рубанки')
-						+catalogPageItem(6, 'Рубанки')
-						+catalogPageItem(7, 'Рубанки')
-						+catalogPageItem(8, 'Рубанки')
-						+catalogPageItem(9, 'Строительные фены')
-						//-+catalogPageItem(2, 'MultiVolt')
-						//-+catalogPageItem(3, 'Сетевой электроинструмент')
-						//-+catalogPageItem(4, 'Аккумуляторный инструмент')
-			+b.sSeo#sSeo
-				h2 Заголовок SEO текста
-				p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+					+e.row.row
+						+catalogPageItem(1, 'Инструменты с функцией Connectivity и Bluetooth-модули')
+						+catalogPageItem(2, 'Дрели, ударные дрели и шуруповерты')
+						+catalogPageItem(3, 'Перфораторы и отбойные молотки')
+						+catalogPageItem(4, 'Угловые шлифмашины и металлообработка')
+						+catalogPageItem(5, 'Стационарные инструменты и столы')
+						+catalogPageItem(6, 'Шлифмашины и рубанки')
+						+catalogPageItem(7, 'Аккумуляторные инструменты')
+						+catalogPageItem(8, 'Техника для алмазного сверления')
 
 mixin asideItem(name, activeClass='')
 	+e.item(class=activeClass)
 		+e.i-head.dd-head-js
 			+e.name=name
-			+icon('chevron-down')
+			//- +icon('chevron-down')
 		+e.content.dd-content-js(class=activeClass)
 			if block
 				block
 			else
 				+e.links
-					+e.link(href="#") Screw-driving / Drilling
-					+e.link(href="#") Hammer-drilling
-					+e.link(href="#") Screw-driving
-					+e.link(href="#") Fastening
-					+e.link(href="#") Grinding
-					+e.link(href="#") Cutting
-					+e.link(href="#") Sawing / Planing
-					+e.link(href="#") Cleaning
-					+e.link(href="#") Nailing
-					+e.link(href="#") Landscaping
-					+e.link(href="#") Miscellaneous
+					+e.link(href="#") Система 12 В
+					+e.link(href="#") Система 18 В
+					+e.link(href="#") Дрели-шуруповерты
+					+e.link(href="#") Ударные дрели-шуруповерты
 
 mixin sCatalogPage3(data)
 	// start sCatalogPage
@@ -105,38 +81,48 @@ mixin sCatalogPage3(data)
 		+e.container.container
 			block
 			+e.main-row.row
+				.col-12
+					+e.filtred
+						+e.filtred-item
+							+e.filtred-reset(href="#")
+							+e.filtred-text Зарядный ток (A): 4 А
+						+e.filtred-item 
+							+e.filtred-reset(href="#")
+							+e.filtred-text Зарядное напряжение аккумулятора (В): 10,8 – 12 В
+						+e.filtred-drop(href="#") 
+							+icon('reset')
+							| Сбросить выбор
 				.col-lg-3
 					+b.cat-aside.cat-aside-dd-js
 						+e.box
-							+e.header Инструменты
+							+e.header Каталог
 								+icon('chevron-down')
 							+e.items
+								+asideItem('Аккумуляторные инструменты')
+								+asideItem('Инструменты с функцией Connectivity и Bluetooth-модули')
+								+asideItem('Система 18 В')
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
-								+asideItem('Ударные шуруповерты')
-						+FiltersBlock()
-						+filterBtnsBar()
+					+FiltersBlock()
+					+filterBtnsBar()
 				.col-lg-9
 					+e.options
-						+e.o-row.row.align-items-start
-							.col
-								h2 Инструменты
-							.col-auto
-								+e.o-sub-row.row
-									.col-auto
-										+e.select
-											+input('Цена по возрастанию', 'select')
-									.col-auto.d-none.d-md-block
-										+e.icon-btn
-											+icon('square')
-									.col-auto.d-none.d-md-block
-										+e.icon-btn.active
-											+icon('lines')
+						+e.o-row.row
+							.col-auto.d-none.d-md-block
+								+e.icon-btn
+									+icon('square')
+							.col-auto.d-none.d-md-block
+								+e.icon-btn.active
+									+icon('lines')
+							.col-auto.ms-auto
+								+e.select
+									+input('Цена по возрастанию', 'select')
 					+sqprodItemsRow()
+					+longProdItemsRow()
 					+pugin('pb-48 pb-md-60')
-					+b.sSeo#sSeo
-						h2 Заголовок SEO текста
-						p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+					+b.description
+						h2 Система 36 В
+						p Если тебе нужна максимальная мощность вместе с удобством беспроводного инструмента, оптимальный выбор - наши системы 36 В. Благодаря системе Flexible Power ты сможешь устанавливать любой 36 В аккумулятор и использовать зарядное устройство с любым 36 В инструментом.
 
 mixin sCatalogPage4(data)
 	// start sCatalogPage
@@ -153,8 +139,8 @@ mixin sCatalogPage4(data)
 								+asideItem('Дрели-шуруповерты')
 								+asideItem('Ударные дрели-шуруповерты')
 								+asideItem('Ударные шуруповерты')
-						+FiltersBlock()
-						+filterBtnsBar()
+					+FiltersBlock()
+					+filterBtnsBar()
 				.col-lg-9
 					+e.options
 						+e.o-row.row.align-items-start
@@ -181,39 +167,31 @@ mixin sqprodItemsRow(addClasses)
 	+e.row.row.pb-48.pb-md-60(class=addClasses)
 		.col-xsm-6.col-md-4
 			+item-prod('1', false, 'VB3616DA')
-				+e.badge.bg-red Новинка
+				+e.badge.bg-blue Хит
 		.col-xsm-6.col-md-4
 			+item-prod('2', false, 'CB18DBL', 'Cordless Band Saw')
+				+e.badge.bg-green Новинка
 		.col-xsm-6.col-md-4
 			+item-prod('2', false, 'CB18DBL', 'MULTI VOLT(36V) Cordless Metal Cutting Saw', false)
 		.col-xsm-6.col-md-4
 			+item-prod('1', false, 'VB3616DA')
-				+e.badge.bg-red Новинка
 		.col-xsm-6.col-md-4
 			+item-prod('2', false, 'CB18DBL', 'Cordless Band Saw')
 		.col-xsm-6.col-md-4
 			+item-prod('2', false, 'CB18DBL', 'MULTI VOLT(36V) Cordless Metal Cutting Saw', false)
-		.col-xsm-6.col-md-4
-			+item-prod('1', false, 'VB3616DA')
-				+e.badge.bg-red Новинка
-		.col-xsm-6.col-md-4
-			+item-prod('2', false, 'CB18DBL', 'Cordless Band Saw')
-		.col-xsm-6.col-md-4
-			+item-prod('2', false, 'CB18DBL', 'MULTI VOLT(36V) Cordless Metal Cutting Saw', false)
-
 		block
 
 mixin longProdItemsRow(addClasses)
 	+e.row.row(class=addClasses)
-		.col-xsm-6.col-md-12
+		.col-12
 			+itemProdLong('Шуруповерт с 6 положениями регулировки', '1','new')
-		.col-xsm-6.col-md-12
+		.col-12
 			+itemProdLong('Шуруповерт с 6 положениями регулировки и с проводом длинной 5 м', '2')
-		.col-xsm-6.col-md-12
-			+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
-		.col-xsm-6.col-md-12
-			+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
 		//- .col-xsm-6.col-md-12
+		//- 	+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
+		//- .col-xsm-6.col-md-12
+		//- 	+itemProdLong('Шуруповерт с 6 положениями регулировки', '3','new')
+		//- //- .col-xsm-6.col-md-12
 		//- 	+itemProdLong('5')
 		//- .col-xsm-6.col-md-12
 		//- 	+itemProdLong('6')
@@ -236,29 +214,22 @@ mixin FiltersBlock()
 			+e.discard-filters-btn
 				+icon('cross')
 				span сбросить фильтры
+		+e.title.d-none.d-lg-block
+			+icon('filter')
+			| Фильтр параметров
 		+form-wrap()
-			.check-box-filter-group
-				+e.headline Фильтр
-				+in-c06("checkbox", 'Самоходные', 'no-my-city')(class="filter-checkbox disabled")
-				+in-c06("checkbox", 'Аккумуляторные', 'no-my-city')(class="filter-checkbox ")
-				+in-c06("checkbox", 'Бензольные', 'no-my-city')(class="filter-checkbox ")
-			//- .radio-filter-group
-			//- 	+e.headline Фильтр
-			//- 	+in-r('type-radio-group')(class="filter-radio disabled")
-			//- 		span.check-box-cont
-			//- 			span.circle
-			//- 			span.txt-cont Самоходные
-			//- 	+in-r('type-radio-group')(class="filter-radio")
-			//- 		span.check-box-cont
-			//- 			span.circle
-			//- 			span.txt-cont Аккумуляторные
-			//- 	+in-r('type-radio-group', true)(class="filter-radio")
-			//- 		span.check-box-cont
-			//- 			span.circle
-			//- 			span.txt-cont Бензольные
-			.price-filter-group
-				+e.headline Цена
-				+range("1", "999999")
+			.filter-dd-js
+				.check-box-filter-group
+					+e.headline.dd-head-js Напряжение аккумулятора (В)
+					+e.filter-content.dd-content-js
+						+in-c06("checkbox", '12 В (0)', 'no-my-city')(class="filter-checkbox disabled")
+						+in-c06("checkbox", '14,4–18 В (0)', 'no-my-city')(class="filter-checkbox ")
+						+in-c06("checkbox", '36 В (0)', 'no-my-city')(class="filter-checkbox ")
+						+in-c06("checkbox", '18 В (0)', 'no-my-city')(class="filter-checkbox ")
+				.price-filter-group
+					+e.headline.dd-head-js Цена ₽
+					.dd-content-js
+						+range("1", "999999")
 					//- .check-box-alt-filter-group
 					//- 	+e.headline Фильтр
 					//- 	+in-c06("checkbox", 'Самоходные', 'no-my-city')(class="filter-checkbox-alt disabled")
@@ -266,6 +237,9 @@ mixin FiltersBlock()
 					//- 	+in-c06("checkbox", 'Бензольные', 'no-my-city')(class="filter-checkbox-alt ")
 			.accept-filters-btn-cont.d-block.d-lg-none
 				.accept-filters-btn применить фильтры
+		a(href="#").sCatalogPage__filtred-drop.d-none.d-lg-block
+			+icon('reset')
+			| Сбросить выбор
 mixin range(c1, c2)
 	.range-wrap.price_slider_amount
 		.label-cont
@@ -295,28 +269,34 @@ mixin in-r(name='radio-btn-group', checked=false)
 			block
 
 mixin itemProdLong(title,img,tag)
-	+b.long-item.text-center.text-md-start
-		+e.row.row
-			+e.img-col.col-md-auto
-				if tag
-					+e.tag Новинка
-				else
-				+e.img(href="#")
-					img(loading='lazy' src=`img/@2x/lc-img-${img}.jpg` alt="")
-			+e.content-col.col-md
-				+e.links
-					+e.compare(href="#")
-						+icon('bars')
-					+e.bookmarks(href="#")
-						+icon('heart')
-				if title
-					+e.title(href="#")=title
-				else
-					+e.title(href="#") MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+	+b.long-item
+		+e.about-col(href="#")
+			if tag
+				.prod-item__badge.bg-green Новинка
+			else
+			+e.img
+				img(loading='lazy' src=`img/@2x/lc-img-${img}.png` alt="")
+			+e.content-col
 				+e.code VB3616DA
-				//- +e.lower-row.row.align-items-center
-				+e.price-col
-					+e.price--old 18 500 ₽
-					+e.price--new 16 500 ₽
-					//- +e.btn-col.col-md-auto
-				+e.btn(href='#') Купить
+				if title
+					+e.title=title
+				else
+					+e.title MULTI VOLT (36V) Cordless Portable Rebar Cutter/Bender
+				dl
+					dt Страна производства
+					dd Швеция
+					dt Габариты в упаковке (мм)
+					dd 305 x 520 x 610
+					dt 305 x 520 x 610
+					dd 19.2кг
+		+e.price-col
+			.prod-item__discount 10%
+			+e.links
+				+e.compare(href="#")
+					+icon('bars')
+				+e.bookmarks(href="#")
+					+icon('star')
+			+e.price--new 16 500 ₽
+			+e.price--old 18 500 ₽
+			//- +e.btn-col.col-md-auto
+			+e.btn(href='#') В корзину

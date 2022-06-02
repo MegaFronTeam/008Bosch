@@ -6,6 +6,7 @@
 	h2{
 		margin-bottom: rem(30);
 		font-size: 24px;
+		font-weight: 300;
 		@include media-breakpoint-up(md){
 			font-size: rem(34);
 		}

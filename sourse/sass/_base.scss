@@ -727,28 +727,42 @@ body{
 //
 .pagination{
 	&__row{
+		align-items: center;
 		justify-content: center;
 		@include roww(12px);
+		@include media-breakpoint-down(sm) {
+			@include roww(6px);
+		}
 	}
 	&__btn{
-		font-size: rem(20);
 		&--controll{
 			@extend .btn;
 			@extend .btn-light;
-
+			width: 42px !important;
+			height: 54px !important;
+			border-radius: 0;
+			color: $primary;
+			background: #EFF1F2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				background-color: $gray-100;
+			}
 			.icon{
 				@include mt();
-				font-size: 18px;
-				color: transparent;
-				stroke: $primary;
 				stroke-width: 2px;
+				font-size: 24px;
+				color: transparent;
+				fill: none;
+				stroke: $primary;
 			}
 		}
 		&--link{
 			@extend .btn;
 			@extend .btn-outline-primary;
-
-			border: 1px solid $light;
+			color: $body-color;
+			border: 1px solid $gray-400;
 			&:not(.current):hover{
 				border: 1px solid $primary!important;
 				background-color: transparent!important;
@@ -758,7 +772,6 @@ body{
 			&.current{
 				@extend .active;
 				color: $white;
-				font-weight: 700;
 				border: 1px solid $primary;
 			}
 		}
@@ -775,8 +788,8 @@ body{
 		// 	height: 36px;
 		// }
 		@include media-breakpoint-up(sm){
-			width: 36px;
-			height: 36px;
+			width: 50px;
+			height: 50px;
 		}
 	}
 }
