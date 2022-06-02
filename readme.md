@@ -7,4 +7,5 @@
 7. <https://megafronteam.github.io/008Bosch/public/07-compare.html>
 8. <https://megafronteam.github.io/008Bosch/public/09-contacts.html>
 9. <https://megafronteam.github.io/008Bosch/public/010-news.html>
-9. <https://megafronteam.github.io/008Bosch/public/011-article.html>
+10. <https://megafronteam.github.io/008Bosch/public/011-article.html>
+11. <https://megafronteam.github.io/008Bosch/public/012-promotion.html>
