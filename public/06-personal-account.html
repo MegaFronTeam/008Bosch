@@ -2491,11 +2491,11 @@
 				<div class="modal-win__title">Ваш город Москва?
 				</div>
 				<div class="row">
-					<div class="col-6">
+					<div class="col">
 						<button class="modal-win__btn" type="button">Да
 						</button>
 					</div>
-					<div class="col-6">
+					<div class="col">
 						<button class="modal-win__btn-outline" type="button">Нет
 						</button>
 					</div>
@@ -2506,11 +2506,11 @@
 				<div class="modal-win__title">Товар добавлен в корзину
 				</div>
 				<div class="row">
-					<div class="col-6">
+					<div class="col">
 						<button class="modal-win__btn" type="button">Оформить
 						</button>
 					</div>
-					<div class="col-6">
+					<div class="col">
 						<button class="modal-win__btn-outline" type="button">Продолжить
 						</button>
 					</div>
@@ -2633,25 +2633,23 @@
 			<div class="modal-win" id="modal-call">
 				<div class="form-wrap">
 					<form>
-						<div class="modal-win__title text-center mb-24">Заказ звонка</div>
+						<div class="modal-win__title mb-24">Заказ звонка</div>
 						<div class="form-wrap__inputs">
+							<div class="form-wrap__input-wrap form-group">
+								<label><span class="form-wrap__input-title">ФИО*</span><input class="form-wrap__input form-control invalid" name="text" type="text" placeholder="" required="required"/>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
 								<label><span class="form-wrap__input-title">Телефон*</span><input class="form-wrap__input form-control valid" name="tel" type="tel" placeholder="" required="required"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
-							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Ваше Имя*</span><input class="form-wrap__input form-control invalid" name="text" type="text" placeholder="" required="required"/>
-								</label>
-							</div>
-							<!-- +e.input-wrap-->
 						</div>
-						<div class="text-center">
-							<input class="btn btn-primary disabled mb-12" type="submit" value="Перезвоните мне"/>
-							<div class="polite">Нажимая на кнопку, вы подтверждаете своё совершеннолетие,<br/>соглашаетесь на обработку персональных данных в соответствии<br/>с
-								<a href="#">Условиями</a>, а также с
-								<a href="#">Условиями продажи</a>
+						<div class="modal-bottom row">
+							<div class="form-wrap__polite">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
 							</div>
+							<input class="btn btn-primary mb-12" type="submit" value="Отправить"/>
 						</div>
 					</form>
 				</div>
@@ -2660,9 +2658,10 @@
 			<div class="modal-win" id="modal-inner">
 				<div class="form-wrap">
 					<form>
-						<div class="modal-win__title text-center mb-24">Авторизация</div>
+						<div class="modal-win__title mb-24">
+							 Авторизация<a href="#">Регистрация</a></div>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">Эл. почта*</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
+							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -2671,17 +2670,12 @@
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
-						<div class="text-center">
-							<a class="form-wrap__forgot d-block mb-24" href="#">Забыли пароль?
-							</a>
-							<div class="row">
-								<div class="col-6">
-									<button class="modal-win__btn" type="button">Войти</button>
-								</div>
-								<div class="col-6">
-									<button class="modal-win__btn-outline" type="button">Регистрация</button>
-								</div>
+						<a class="form-wrap__forgot d-block mb-24" href="#">Забыли пароль?
+						</a>
+						<div class="modal-bottom row">
+							<div class="form-wrap__polite col-auto">Нажимая кнопку "Войти", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
 							</div>
+							<input class="btn btn-primary mb-12 col" type="submit" value="Войти"/>
 						</div>
 					</form>
 				</div>
@@ -2690,10 +2684,9 @@
 			<div class="modal-win" id="modal-reg">
 				<div class="form-wrap">
 					<form>
-						<div class="text-center">
-							<div class="modal-win__title mb-24">Регистрация</div>
-						</div>
-						<div class="form-wrap__inputs pb-60">
+						<div class="modal-win__title mb-24">
+							 Регистрация<a href="#">Авторизация</a></div>
+						<div class="form-wrap__inputs">
 							<div class="form-wrap__input-wrap form-group">
 								<label><span class="form-wrap__input-title">Эл. почта*</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
 								</label>
@@ -2709,10 +2702,13 @@
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
-							<div class="invalid-alert text-danger small">Пароли не совпадают</div>
+							<a class="form-wrap__forgot form-wrap__forgot--red d-block mb-24" href="#"> Пароли не совпадают
+							</a>
 						</div>
-						<div class="text-center">
-							<button class="btn btn-primary disabled" type="submit">Зарегистрироваться</button>
+						<div class="modal-bottom row">
+							<div class="form-wrap__polite col-auto">Нажимая кнопку "Зарегистрироваться", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+							</div>
+							<input class="btn btn-primary mb-12 col" type="submit" value="Зарегистрироваться"/>
 						</div>
 					</form>
 				</div>
@@ -2734,7 +2730,7 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Электронная почта*</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
+								<label><span class="form-wrap__input-title">Email*</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
@@ -2779,12 +2775,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="text-center">
-							<button class="btn btn-primary disabled mb-12" type="submit">Отправить</button>
-							<div class="polite">Нажимая на кнопку, вы подтверждаете своё совершеннолетие,<br/>соглашаетесь на обработку персональных данных в соответствии<br/>с
-								<a href="#">Условиями</a>, а также с
-								<a href="#">Условиями продажи</a>
+						<div class="modal-bottom row">
+							<div class="form-wrap__polite col-auto">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
 							</div>
+							<input class="btn btn-primary mb-12 col" type="submit" value="Отправить"/>
 						</div>
 					</form>
 				</div>

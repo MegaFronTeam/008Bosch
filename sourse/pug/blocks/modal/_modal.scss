@@ -1,10 +1,11 @@
 @use "sass:math";
 
 .modal-win {
-	max-width: 555px!important;
+	max-width: 540px!important;
 	width: 100% !important;
 	position: relative;
-	padding: 36px 0 48px 0;
+	padding: 30px 0 30px 0;
+	background-color: $gray-100 !important;
 	&--goods {
 		padding: rem(60) rem(30) rem(40) !important;
 		max-width: 670px !important;		
@@ -35,22 +36,41 @@
 			margin-bottom: 30px;
 		}
 	}
-
+	form {
+		background-color: $gray-100;
+	}
+	.row {
+		--bs-gutter-y: 15px;
+	}
 	&__title{
-		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 		margin-bottom: 30px;
-		font-size: 24px;
+		font-size: rem(24);
 		line-height: 1.2;
+		@media (max-width: 450px) {
+			flex-direction: column;
+		}
+		a {
+			margin-left: auto;
+			font-size: 16px;
+			color: $primary;
+			@media (max-width: 450px) {
+				margin-left: 0;
+			}
+		}
 	}
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
-		width: 100%;
+		width: 165px;
 	}
 	&__btn-outline{
 		@extend .btn;
 		@extend .btn-outline-primary;
-		width: 100%;
+		background-color: $white;
+		width: 165px;
 	}
 	.disabled {
 		border: none;
@@ -69,8 +89,20 @@
 	}
 	//
 	.form-wrap{
+		label {
+			display: flex;
+			align-items: center;
+			@media (max-width: 450px) {
+				flex-wrap: wrap;
+			}
+		}
+		span {
+			width: 30%;
+			margin-bottom: 0;
+		}
+	
 		&__inputs{
-			padding-bottom: 24px;
+			// padding-bottom: 24px;
 		}
 		&__input-wrap{
 			margin-bottom: 12px;
@@ -78,9 +110,7 @@
 				margin-bottom: 0;
 			}
 		}
-		&__input{
-
-		}
+		
 		&__input-title{
 			display: block;
 			margin-bottom: 6px;
@@ -112,6 +142,32 @@
 			width: 165px;
 			margin: 0 auto;
 		}
+		&__polite {
+			min-width: 190px;
+			max-width: 315px;
+			margin-right: rem(30);
+			margin-left: -15px;
+			font-size: 12px;
+			@media (max-width: 450px) {
+				max-width: none;
+				width: 100%;
+			}
+			& > btn {
+				max-width: none;
+				width: 100%;
+			}
+		}
+		&__forgot {
+			font-size: 12px;
+			margin-left: 23%;
+			&--red {
+				color: $red;
+			}
+			@media (max-width: 450px) {
+				margin-left: 0;
+			}
+		}
+	
 		
 		//
 		&__{}
@@ -121,7 +177,7 @@
 	.tabs{
 		&__caption{
 			margin: 0 0 24px;
-			border-bottom: 1px solid $primary;
+			border-bottom: 1px solid $gray-400;
 		}
 		&__btn{
 			font-size: 14px;
@@ -144,6 +200,7 @@
 }
 
 .polite{
+	margin-right: rem(30);
 	font-size: 12px;
 	line-height: math.div(17, 12);
 }
@@ -155,7 +212,20 @@ a {
 .modal-form {
 	position: relative;
 }
-
+.modal-bottom {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid $gray-400;
+	.btn {
+		width: auto;
+		@media (min-width: 450px) {
+			
+		}
+	}
+}
 
 .mfp-close {
 	user-select: none;
@@ -207,10 +277,13 @@ a {
 	}
 }
 .dropzone {
-	border: 1px dashed $primary;
+	border: 1px dashed $gray-400;
 	min-height: rem(100px);
 	padding: 0;
 	text-align: center;
+	&:hover {
+		border: 1px dashed $primary;
+	}
 }
 .dz-button {
 	color: $primary!important;
@@ -256,6 +329,7 @@ a {
 		color: #4E4E4E;
 		line-height: 1.5;
 		font-size: 14px;
+		
 	}
 	&__price {
 		display: flex;

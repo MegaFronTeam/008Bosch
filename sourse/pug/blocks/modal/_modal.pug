@@ -4,17 +4,17 @@ mixin modal()
 		+b.modal-win.text-center(id="modal-city")
 			+e.title Ваш город Москва?
 			.row
-				.col-6
+				.col
 					+e.btn(type="button") Да
-				.col-6
+				.col
 					+e.btn-outline(type="button") Нет
 		// #modal-city
 		+b.modal-win.text-center(id="modal-prod-add")
 			+e.title Товар добавлен в корзину
 			.row
-				.col-6
+				.col
 					+e.btn(type="button") Оформить
-				.col-6
+				.col
 					+e.btn-outline(type="button") Продолжить
 		//#modal-prod-add
 		+b.modal-win.--goods.text-center(id="modal-prod-added")
@@ -47,38 +47,47 @@ mixin modal()
 		//#modal-prod-added
 		+b.modal-win(id="modal-call")
 			+form-wrap()
-				.modal-win__title.text-center.mb-24 Заказ звонка
+				.modal-win__title.mb-24 Заказ звонка
 				+e.inputs
+					+input("","text",'ФИО*')(required class="invalid")
 					+input("","tel",'Телефон*')(required class="valid")
-					+input("","text",'Ваше Имя*')(required class="invalid")
-				.text-center
-					input.btn.btn-primary.disabled.mb-12(type="submit" value="Перезвоните мне")
-					+polite()
+				.modal-bottom.row
+					+e.polite Нажимая кнопку «Отправить», вы соглашаетесь с 
+						a(href="#") Политикой конфиденциальности.
+					input.btn.btn-primary.mb-12(type="submit" value="Отправить")
 		// #modal-call
 		+b.modal-win(id="modal-inner")
 			+form-wrap()
-				.modal-win__title.text-center.mb-24 Авторизация
-				+input("","email",'Эл. почта*')(required)
+				.modal-win__title.mb-24 
+					| Авторизация
+					a(href="#") Регистрация
+				+input("","email",'E-mail')(required)
 				+input("","password",'Пароль*')(required)
-				.text-center
-					+e.forgot.d-block.mb-24(href="#") Забыли пароль?
-					.row
-						.col-6
-							button.modal-win__btn(type="button") Войти
-						.col-6
-							button.modal-win__btn-outline(type="button") Регистрация
+				+e.forgot.d-block.mb-24(href="#") Забыли пароль?
+				.modal-bottom.row
+					+e.polite.col-auto Нажимая кнопку "Войти", вы соглашаетесь с 
+						a(href="#") Политикой конфиденциальности.
+					input.btn.btn-primary.mb-12.col(type="submit" value="Войти")
+					//- .row
+					//- 	.col-6
+					//- 		button.modal-win__btn(type="button") Войти
+					//- 	.col-6
+					//- 		button.modal-win__btn-outline(type="button") Регистрация
 		// #modal-inner
 		+b.modal-win(id="modal-reg")
 			+form-wrap()
-				.text-center
-					.modal-win__title.mb-24 Регистрация
-				+e.inputs.pb-60
+				.modal-win__title.mb-24 
+					| Регистрация
+					a(href="#") Авторизация
+				+e.inputs
 					+input("","email",'Эл. почта*')(required)
 					+input("","password",'Пароль*')(required)
 					+input("","password",'Повторить пароль*')(required class="border-danger text-danger")
-					.invalid-alert.text-danger.small Пароли не совпадают
-				.text-center
-					button.btn.btn-primary.disabled(type="submit") Зарегистрироваться
+					+e.forgot.--red.d-block.mb-24(href="#")  Пароли не совпадают
+				.modal-bottom.row
+					+e.polite.col-auto Нажимая кнопку "Зарегистрироваться", вы соглашаетесь с 
+						a(href="#") Политикой конфиденциальности.
+					input.btn.btn-primary.mb-12.col(type="submit" value="Зарегистрироваться")
 		// #modal-reg
 		+b.modal-win(id="modal-order-request")
 			+form-wrap()
@@ -86,7 +95,7 @@ mixin modal()
 				+e.inputs
 					+input('', 'text', 'ФИО*', 'user-name')(required)
 					+input('', 'tel', 'Телефон*', 'phone')(required)
-					+input('', 'email', 'Электронная почта*')(required)
+					+input('', 'email', 'Email*')(required)
 				.tabs
 					.tabs__caption.row
 						.col-6
@@ -104,7 +113,8 @@ mixin modal()
 							#props-dz.dropzone()
 								.fallback
 									input(name='file', type='file', multiple='')
-				.text-center
-					button.btn.btn-primary.disabled.mb-12(type="submit") Отправить
-					+polite()
+				.modal-bottom.row
+					+e.polite.col-auto Нажимая кнопку "Отправить", вы соглашаетесь с 
+						a(href="#") Политикой конфиденциальности.
+					input.btn.btn-primary.mb-12.col(type="submit" value="Отправить")
 // end modals
