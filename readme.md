@@ -1,4 +1,9 @@
 1. <https://megafronteam.github.io/008Bosch/public> 
+1. <https://megafronteam.github.io/008Bosch/public/00-modals.html> 
+1. <https://megafronteam.github.io/008Bosch/public/02-catalog-1.html> 
+1. <https://megafronteam.github.io/008Bosch/public/02-catalog-2.html> 
+1. <https://megafronteam.github.io/008Bosch/public/02-catalog-3.html> 
+1. <https://megafronteam.github.io/008Bosch/public/03-prod-card.html> 
 2. <https://megafronteam.github.io/008Bosch/public/04-cart.html>
 3. <https://megafronteam.github.io/008Bosch/public/05-order-1.html>
 4. <https://megafronteam.github.io/008Bosch/public/05-order-2.html>

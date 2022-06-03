@@ -72,6 +72,9 @@
 		padding-top: 60px;
 		overflow: hidden;
 		// margin-bottom: rem(14);
+		@include media-breakpoint-down(md) {
+			height: 250px;
+		}
 		&:after{
 			@include mt();
 			content: '';
@@ -97,18 +100,22 @@
 		margin-top: auto;
 		color: $white;
 		padding: 10px;
-		position: absolute;
-		bottom: 0;
+		// position: absolute;
+		// bottom: 0;
 		@include media-breakpoint-up(xl) {
-			// position: absolute;
+			position: absolute;
 			padding: 30px;
-			// bottom: 0;
-			// left: 0;
-			// max-height: 75%;
+			bottom: 0;
+			left: 0;
+			max-height: 75%;
 			color: $white;
 			z-index: 10;
-			// pointer-events: none;
+			pointer-events: none;
 		}
+		// @include media-breakpoint-down(lg) {
+		// 	position: static;
+		// 	color: $body-color;
+		// }
 	}
 	&__date {
 		font-size: rem(16);
@@ -121,15 +128,15 @@
 		font-size: rem(24);
 		line-height: 125%;
 		color: $white !important;
-		// @include media-breakpoint-down(xl) {
-		// 	position: absolute;
-		// 	padding: 20px;
-		// 	top: 30%;
-		// 	left: 0;
-		// 	color: $white;
-		// 	z-index: 10;
-		// 	pointer-events: none;
-		// }
+		@include media-breakpoint-down(xl) {
+			position: absolute;
+			padding: 20px;
+			top: 30%;
+			left: 0;
+			color: $white;
+			z-index: 10;
+			pointer-events: none;
+		}
 		@include media-breakpoint-down(lg) {
 			font-size: rem(18);
 		}
@@ -174,6 +181,9 @@
 		line-height: 1.40em;
 		font-size: rem(16);
 		margin-bottom: 0;
+		@include media-breakpoint-down(xl) {
+			color: $body-color;
+		}
 		@include media-breakpoint-down(md) {
 			font-size: rem(14);
 		}

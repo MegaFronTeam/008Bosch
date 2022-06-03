@@ -491,6 +491,11 @@ form {
 					padding-bottom: 0;
 					border-bottom: 1px solid $gray-400;
 				}
+				&.active {
+					.form-wrap__headline:before {
+						opacity: 0;
+					}
+				}
 			}
 			.radio-filter-group{
 				//order: 4;
@@ -506,6 +511,11 @@ form {
 				@include media-breakpoint-up(lg){
 					order: 0;
 					padding: 0;
+				}
+				&.active {
+					.form-wrap__headline:before {
+						opacity: 0;
+					}
 				}
 			}
 			.check-box-alt-filter-group{
