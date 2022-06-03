@@ -347,7 +347,8 @@ function eventHandler() {
 		'.pa-orders-dd-js',
 		'.delivery-group-dd-js',
 		'.order-content-dd-js',
-		'.filter-dd-js'
+		'.filter-dd-js',
+		'.property-dd-js'
 	]);
 
 	//filter custom pop-up
@@ -425,8 +426,8 @@ function eventHandler() {
 					spaceBetween: 16,
 				},
 				768: {
-					direction: 'vertical',
-					spaceBetween: 20,
+					// direction: 'vertical',
+					spaceBetween: 30,
 				},
 			},
 			//lazy
@@ -437,6 +438,10 @@ function eventHandler() {
 		});
 		let prodCardSlider = new Swiper(pcSlider.querySelector('.sProdCard-slider-js'), {
 			spaceBetween: 30,
+			navigation: {
+				nextEl: '.pc-sliders .swiper-next',
+				prevEl: '.pc-sliders .swiper-prev',
+			},
 			thumbs: {
 				swiper: prodCardThumb,
 			},

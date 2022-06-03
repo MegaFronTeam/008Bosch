@@ -3,52 +3,73 @@ mixin sProdCard(data)
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
 		.container
 			block
-			+b.section-title.long
+			+b.section-title.hit
+				h1.p-0 Аккумуляторная угловая шлифмашина с X-LOCK GBH 36 V-LI PLUS
 			+e.main-row.row
 				.col-lg-8
-					+prodCardSliders('d-none d-lg-block')
+					+prodCardSliders()
 					+productTabs()
 				+e.side-col.col-lg-4
-					+e.row.row
-						.col-auto.d-none.d-sm-block
-							+e.icons-row.row
-								.col-auto
-									+e.icon(href='#')
-										+icon('heart')
-										| В избранное
-								.col-auto
-									+e.icon(href='#')
-										+icon('bars')
-										| Сравнить
-								.col-auto
-									+e.icon(href='#')
-										+icon('share')
-										| Поделиться
-						.col-12.col-lg
-							+prodCardSliders('d-lg-none')
-							h2.p-0 Шуруповерт с 6 положениями регулировки
-							+e.subtitle DF332DWME
-							+e.property
-								p <strong>Артикул: 600080500</strong>
-								p.available В наличии
-								p <strong>Доставка:</strong>
-								p Курьером в пределах МКАД - при сумме заказа от 1500р (от 1500р до 4999р стоимость доставки 200руб, от 5000р - бесплатно)
-								p <strong> Самовывоз бесплатно: </strong>
-								p Москва Сормовский проезд 11/7
-								p Отправка заказов по всей России
-								p #[strong Габариты в упаковке: ] 315мм x 375мм x 102мм
-								p #[strong Вес: ] 2.81кг
-								p 
-									span 12В
-									span 35 Нм
-									span 1500 об/мин
+					mixin available(available)
+						if available
+							+e.available.--true В наличии
+						else
+							+e.available.--false Нет в наличии
+					+available('available')
+					+e.number Артикул: 12C1467P
 					+buyBlock()
-					+miniSlider()
-			+sCatalogHit('с этим товаром покупают')
-			+sCatalogHit('похожие товары')
-			.text-center
-				.sCategory__btn-more.BUTTON(type="button")
-					+icon("plus")
+					+e.property.property-dd-js
+						+e.property-item
+							+e.property-head.dd-head-js.active Варианты доставки
+							+e.property-content.dd-content-js
+								p Курьерская доставка по Москве
+								span от 200 до 500 руб. / 1-2 дня
+								p Доставка по России
+								span от 500 руб. / 1-2 дня
+								p Самовывоз
+								span Бесплатно
+								+e.property-note При заказе от 5 000 руб. доставка бесплатная. Точную стоимость доставки уточняйте у менеджера.
+						+e.property-item
+							+e.property-head.dd-head-js Описание
+							+e.property-content.dd-content-js
+								p Страна производства
+								span Швеция
+								p Габариты в упаковке (мм)
+								span 305 x 520 x 610
+								p Вес
+								span 19.2кг
+								+e.property-link(href='#') Подробнее
+					+e.row.row
+						//- .col-auto.d-none.d-sm-block
+							//- +e.icons-row.row
+							//- 	.col-auto
+							//- 		+e.icon(href='#')
+							//- 			+icon('heart')
+							//- 			| В избранное
+							//- 	.col-auto
+							//- 		+e.icon(href='#')
+							//- 			+icon('bars')
+							//- 			| Сравнить
+							//- 	.col-auto
+							//- 		+e.icon(href='#')
+							//- 			+icon('share')
+						//- .col-12.col-lg
+						//- 	+prodCardSliders('d-lg-none')
+							//- 			| Поделиться
+							//- +e.subtitle DF332DWME
+					+e.promo
+						+e.promo-head
+							+e.promo-title Акции
+							+e.promo-link(href='#') Все акции
+						mixin promoItem(img,title)
+							+e.promo-item(href="#")
+								img(src=`img/@2x/promo-${img}.jpg`)
+								+e.promo-name!= title
+						+promoItem('1','Созданы для работы по дереву')
+						+promoItem('2','Всего один CLICK!')
+						+promoItem('3','Все данные в одном формате')
+			+sCatalogHit('Рекомендуемые товары')
+	
 					//- +tableDescr('Наличие в магазинах')
 					//- 	+tableDescrItem('Магазин Дмитровка', 'В наличии')
 					//- 	+tableDescrItem('Магазин Дмитровка', 'Под заказ')
@@ -75,15 +96,16 @@ mixin productTabs()
 		+e.caption.tabs__caption
 			.swiper.prodTabs-caption-slider-js
 				.swiper-wrapper
-					+productTabsSlide('Описание')
-					+productTabsSlide('Характеристики', 'active')
-					+productTabsSlide('Комплектация')
-					+productTabsSlide('Принадлежности и запасные части')
+					+productTabsSlide('Описание', 'active')
+					+productTabsSlide('Характеристики')
+					+productTabsSlide('Документы')
+					+productTabsSlide('Запасные части')
 					+productTabsSlide('Отзывы','count')
 		+e.wrap.tabs__wrap
-			.tabs__content 
-				p Компактная легкая дрель-шуруповерт с&nbsp;бесщеточным двигателем и&nbsp;улучшенной защитой от&nbsp;пыли и&nbsp;грязи. Имеет 20&nbsp;установок крутящего момента, 2-х скоростной редуктор и&nbsp;подсветку рабочей зоны. Кейс, зарядное устройство, 2&nbsp;аккумулятора 4,0&nbsp;Ач.
 			.tabs__content.active
+				+e.title Описание
+				p Газонокосилка бензиновая Husqvarna LC140 9676367-01 используется для кошения травы. Имеет вместительный контейнер. Бензиновый двигатель Briggs&amp;Stratton 450 series обеспечивает длительный срок службы машины. Колеса на&nbsp;шарикоподшипниках отличаются высокой плавностью хода. Складная рукоятка обеспечивает удобство хранения и&nbsp;транспортировки косилки. Центральная регулировка высоты скашивания варьируется от&nbsp;25&nbsp;до&nbsp;75&nbsp;мм
+			.tabs__content
 				+e.table
 					+prodTabsTableRow('Номинальная потребляемая мощность','1100 Вт')
 					+prodTabsTableRow('Напряжение сети','220 - 240 В')
@@ -91,64 +113,68 @@ mixin productTabs()
 					+prodTabsTableRow('Максимальная высота всасывания','Максимальная высота всасывания 8 м')
 					+prodTabsTableRow('Макс. высота подачи','Макс. высота подачи 46 м')
 					+prodTabsTableRow('Макс. давление','Макс. давление 4,6 бар')
-			.tabs__content 2
-			.tabs__content 3
 			.tabs__content
+				+e.title Инструкция
+				+e.docs
+					+e.docs-item
+						+icon('doc')
+						+e.doc-title Аккумуляторная угловая шлифмашина с X-LOCK GBH 36 V-LI PLUS
+						button.prodTabs__docs-btn Скачать
+			.tabs__content
+				+e.title Запасные части
+				+itemProdLong('Шуруповерт с 6 положениями регулировки', '1','new')
+			.tabs__content
+				+e.title Отзывы
 				+b.feedback
 					+e.item
-						+e.source Отзывы с Яндекс.Маркета 
-						+e.source-link(href='#') Все отзывы на Яндекс.Маркете 
+						+e.source
+							img(src="img/@2x/yandex-market.png") 
+							| Отзывы с Яндекс.Маркета 
 						+e.content
 							+e.info
+								+e.date 28.10.2014 | 15:47
 								+e.user Сошников Андрей
-								+e.date 28.10.2014 | 15:47
-							+e.rating #[span Оценка пользователя:] 
+							+e.rating #[span Оценка пользователя] 
 								+icon('star')
 								+icon('star')
 								+icon('star')
 								+icon('star')
 								+icon('star')
-							+e.text.--main.P Искал генератор мощностью ~6 кВт для строительства дачи и&nbsp;далее для установки как резервная станция. На&nbsp;поиски было пол года, так что в&nbsp;вопрос углубился конкретно. Первым делом рассматривал Hunday, так как фирма на&nbsp;слуху и&nbsp;постоянно видел в&nbsp;работе у&nbsp;строителей. Но&nbsp;пообщавшись с&nbsp;владельцами и&nbsp;потрогав руками в&nbsp;магазине вариант отпал сразу. Отвратительная сборка, провода висят как лапша, ломаются постоянно. Про фирму Fubag раньше вообще не&nbsp;слышал, но&nbsp;продукция заинтересовала. Начал копать и&nbsp;т.д. долго рассказывать, но&nbsp;выбор в&nbsp;данной категории единственный верный. Работает как часы. Для автозапуска требуется приобретение не&nbsp;дешового блока, но&nbsp;оно того стоит.
-							p #[span Достоинства:] Цена и качество сборки
-							p #[span Недостатки:] Пока нет
+							p #[span Достоинства] Цена и качество сборки
+							p #[span Недостатки] Пока нет
+							+e.text.--main.P #[span Отзыв] Искал генератор мощностью ~6 кВт для строительства дачи и&nbsp;далее для установки как резервная станция. На&nbsp;поиски было пол года, так что в&nbsp;вопрос углубился конкретно. Первым делом рассматривал Hunday, так как фирма на&nbsp;слуху и&nbsp;постоянно видел в&nbsp;работе у&nbsp;строителей. Но&nbsp;пообщавшись с&nbsp;владельцами и&nbsp;потрогав руками в&nbsp;магазине вариант отпал сразу. Отвратительная сборка, провода висят как лапша, ломаются постоянно. Про фирму Fubag раньше вообще не&nbsp;слышал, но&nbsp;продукция заинтересовала. Начал копать и&nbsp;т.д. долго рассказывать, но&nbsp;выбор в&nbsp;данной категории единственный верный. Работает как часы. Для автозапуска требуется приобретение не&nbsp;дешового блока, но&nbsp;оно того стоит.
+						+e.source-link(href='#') Все отзывы на Яндекс.Маркете 
 					+e.item
-						+e.source.--makita Отзывы пользователей 
-							a(href="#") Makita.ru
+						+e.source.--bosch 
+							img(src="img/logo.png")
+							| Отзывы пользователей Бош.ру
+							//- a(href="#") Makita.ru
 						+e.content
 							+e.info
-								+e.user Евгений
 								+e.date 28.10.2014 | 15:47
-							+e.rating #[span Оценка пользователя:] 
+								+e.user Евгений
+							+e.rating.--bosch #[span Оценка пользователя ] 
 								+icon('star')
 								+icon('star')
 								+icon('star','icon-star--empty')
 								+icon('star','icon-star--empty')
 								+icon('star','icon-star--empty')
-							+e.text.P Какие 6&nbsp;квт? Максимум&nbsp;4,96квт, смотрите инструксию. Врете вместе с&nbsp;фирмой производителя...
+							+e.text.P #[span Отзыв] Какие 6&nbsp;квт? Максимум&nbsp;4,96квт, смотрите инструксию. Врете вместе с&nbsp;фирмой производителя...
 							+e.answer
 								+e.info
-									+e.manager Петр — представитель Makito #[span в ответ Евгений]
-									+e.date 28.10.2014 | 15:47
-								+e.text.P Евгений, рекомендуем ознакомиться со&nbsp;статьей об&nbsp;максимальной и&nbsp;номинальной мощности двигателя.
-								+e.text.P Все встанет на&nbsp;свои места.
-								+e.link(href="#") https://gardengear.ru/articles/traktora/maximum_and_rated_power_of_the_engines/
-						+e.content
-							+e.info
-								+e.user Евгений
-								+e.date 28.10.2014 | 15:47
-						+e.rating #[span Оценка пользователя:] 
-							+icon('star')
-							+icon('star')
-							+icon('star','icon-star--empty')
-							+icon('star','icon-star--empty')
-							+icon('star','icon-star--empty')
-						+e.text.P Какие 6&nbsp;квт? Максимум&nbsp;4,96квт, смотрите инструксию. Врете вместе с&nbsp;фирмой производителя...
-					+e.show-more
-						+btn('Показать ещё','button')
+									span Ответ Бош.ру
+									+e.manager 
+										img(src="img/@2x/fb-logo.png") 
+										| Артём Нестеров, старший менеджер
+									//- +e.date 28.10.2014 | 15:47
+								+e.text.P Евгений, рекомендуем ознакомиться со&nbsp;статьей об&nbsp;максимальной и&nbsp;номинальной мощности двигателя. Все встанет на&nbsp;свои места.
+								+e.link(href="#") Ссылка
+						+e.source-link(href='#') Показать все отзывы #[sup 34] 
 					+e.form
 						+e.form-title Оставить отзыв
 						+form-wrap
-							+e.rate-label Моя оценка:
+							+e.rate
+								+e.rate-label Моя оценка:
 								+icon('star')
 								+icon('star')
 								+icon('star','icon-star--empty')
@@ -222,9 +248,9 @@ mixin buyBlock()
 		+e.main-row.row
 			+e.price-col.col.col-md-6.col-lg-12
 				+e.price-row.row
-					.col.col-lg-12.col-xl.d-flex.align-items-center
-						+e.price--old 18 500 ₽
+					.col.col-lg-12.col-xl.d-flex.flex-column
 						+e.price--new 16 500 ₽
+						+e.price--old 18 500 ₽
 					+e.inputs-col.col.col-lg-12.col-xl
 						+e.price
 							+e.p-btn--min 
@@ -233,9 +259,11 @@ mixin buyBlock()
 			+e.btns-col.col-auto.col-md-6.col-lg-12
 				+e.btn-row.row
 					.col-md-6.col-lg-12
-						+e.buy-btn(href="#") Купить
+						+e.buy-btn(href="#") В корзину
 					+e.bill-col.col-md-6.col-lg-12
 						+e.bill-btn(href="#") Запросить счёт
+					+e.bill-col.col-md-6.col-lg-12.d-none.d-lg-block
+						+e.bill-btn(href="#") Уведомить о поступлении
 			+e.open-col.col-auto.d-md-none.buy-bl-toggle-js
 				+e.open
 					span
@@ -244,15 +272,7 @@ mixin buyBlock()
 mixin prodCardSliders(addClasses='')
 	+b.pc-sliders--js(class=addClasses)
 		+e.row.row
-			.col-md-auto
-				+e.thumb-slider
-					.swiper.sProdCard-thumb-js
-						.swiper-wrapper
-							+prodCardThumb(1)
-							+prodCardThumb(1)
-							+prodCardThumb(1)
-							+prodCardThumb(1)
-			+e.slider-col.col-md
+			+e.slider-col.col-md-12
 				+e.slider
 					.swiper.sProdCard-slider-js
 						.swiper-wrapper
@@ -260,14 +280,24 @@ mixin prodCardSliders(addClasses='')
 							+prodCardSlide(1)
 							+prodCardSlide(1)
 							+prodCardSlide(1)
+					+arrow('d-none d-sm-flex')
+			.col-12
+				+e.thumb-slider
+					.swiper.sProdCard-thumb-js
+						.swiper-wrapper
+							+prodCardThumb(1)
+							+prodCardThumb(2)
+							+prodCardThumb(3)
+							+prodCardThumb(4)
+							+prodCardThumb(5)
 
 mixin prodCardThumb(imgNum)
 	.swiper-slide
 		+e.th-item
-			img.swiper-lazy(src="#" data-src=`img/@2x/thumb.jpg` alt="")
+			img.swiper-lazy(src="#" data-src=`img/@2x/thumb-${imgNum}.jpg` alt="")
 
 mixin prodCardSlide(imgNum)
 	.swiper-slide
 		+e.slide-img
-			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.jpg` alt="")
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.png` alt="")
 
