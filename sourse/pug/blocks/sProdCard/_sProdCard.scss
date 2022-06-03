@@ -451,7 +451,7 @@
 			@include mt();
 			cursor: pointer;
 			width: 160px !important;
-			height: 98px !important;
+			height: 128px !important;
 
 			opacity: .5;
 			&:hover{
@@ -840,6 +840,18 @@
 		height: 220px;
 	}
 }
+.sProdCard-thumb-js  {
+	.swiper-wrapper{
+		flex-wrap: nowrap;
+		@include media-breakpoint-up(sm) {
+			flex-wrap: wrap;
+			margin-left: calc(-1 * var(--bs-gutter-x)/ 2);
+			margin-right: calc(-1 * var(--bs-gutter-x)/ 2);
+			transform: none!important;
+			width: calc(100% + 30px)!important;
+		}
+	}
+}
 
 .prodTabs{
 	&__caption{
@@ -850,9 +862,6 @@
 			@include media-breakpoint-down(xl){
 				overflow: visible!important;
 			}
-		}
-		.swiper-wrapper{
-
 		}
 		.swiper-slide{
 			width: auto;

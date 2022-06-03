@@ -570,6 +570,9 @@ form {
 			margin-bottom: rem(10px);
 			color: #282828;
 			font-weight: 700;
+			@include media-breakpoint-down(lg) {
+				pointer-events: none;
+			}
 			&::after {
 				position: absolute;
 				content: '';
@@ -578,7 +581,10 @@ form {
 				transform: translateY(-50%);
 				height: 1px;
 				width: 16px;
-				background-color: $primary
+				background-color: $primary;
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
 			}
 			&::before {
 				position: absolute;
@@ -590,10 +596,17 @@ form {
 				width: 1px;
 				background-color: $primary;
 				@include mt;
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
 			}
 		}
 		&__filter-content {
+			display: none;
 			padding: 0 15px 15px;
+			@include media-breakpoint-down(lg) {
+				display: block !important;
+			}
 		}
 		//checkboxes style
 
