@@ -165,6 +165,9 @@
 		}
 	}
 	.form-wrap{
+		form {
+			background-color: transparent;
+		}
 		&__inputs{
 			padding-bottom: 24px;
 		}

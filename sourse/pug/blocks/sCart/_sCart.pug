@@ -10,7 +10,7 @@ mixin sCart(data)
 					+cartItem()
 					+cartItem()
 					+cartItem()
-				.col-lg-4
+				+e.col-order.col-lg-4
 					+e.box
 						+e.order-txt.h4 Ваш заказ
 						+e.o-rows
@@ -21,6 +21,14 @@ mixin sCart(data)
 							+input('Промокод', 'text', false, 'promo')
 							+e.p-btn(type='button')
 								+icon('enter')
+						+e.promo
+							+input('Промокод', 'text', false, 'promo')(value="Freetrimer2020").is-invalid
+							//- +e.p-btn(type='button')
+							//- 	+icon('check')
+						+e.promo
+							+input('Промокод', 'text', false, 'promo')(value="Freetrimer2020").is-valid
+							//- +e.p-btn(type='button')
+							//- 	+icon('cross')
 						+e.o-row--result.row
 							+e.result.col ИТОГО
 							+e.result--2.col-auto 24 600 ₽
