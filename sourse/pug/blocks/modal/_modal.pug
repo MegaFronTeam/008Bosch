@@ -64,7 +64,7 @@ mixin modal()
 					| Авторизация
 					a.link-modal(href="#modal-reg") Регистрация
 				+input("","email",'E-mail')(required)
-				+input("","password",'Пароль*')(required)
+				+input("","password",'Пароль*')(required).is-invalid
 				+e.forgot.d-block.mb-24(href="#") Забыли пароль?
 				.modal-bottom.row
 					.col-auto
@@ -86,7 +86,7 @@ mixin modal()
 				+e.inputs
 					+input("","email",'Эл. почта*')(required)
 					+input("","password",'Пароль*')(required)
-					+input("","password",'Повторить пароль*')(required class="border-danger text-danger")
+					+input("","password",'Повторить пароль*')(required class="border-danger text-danger is-invalid")
 					+e.forgot.--red.d-block.mb-24  Пароли не совпадают
 				.modal-bottom.row
 					.col
