@@ -565,43 +565,49 @@ function eventHandler() {
 	});
 
 		// конечная дата
-		const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01);
-		let timerId = null;
-		function declensionNum(num, words) {
-			return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+		let timer = $('.timer');
+		let deadline;
+		if(timer) {
+			for(i=0; i<timer.length; i++) {
+				deadline = new Date(timer[i].dataset.date);
+			}
+			let timerId = null;
+			function declensionNum(num, words) {
+				return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+			}
+			function countdownTimer() {
+				const diff = deadline - new Date();
+				if (diff <= 0) {
+					clearInterval(timerId);
+				}
+				const $daysAll = document.querySelectorAll('.timer__days');
+				const $hoursAll = document.querySelectorAll('.timer__hours');
+				const $minutesAll = document.querySelectorAll('.timer__minutes');
+				const $secondsAll = document.querySelectorAll('.timer__seconds');
+				for (const $days of $daysAll) {
+					const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+					$days.textContent = days < 10 ? '0' + days : days;
+					$days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+				}
+				for (const $hours of $hoursAll) {
+					const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+					$hours.textContent = hours < 10 ? '0' + hours : hours;
+					$hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+				}
+				for (const $minutes of $minutesAll) {
+					const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+					$minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+					$minutes.dataset.title = declensionNum(minutes, ['мин', 'мин', 'мин']);
+				}
+				for (const $seconds of $secondsAll) {
+					const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+					$seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+					$seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+				}
+			}
+			countdownTimer();
+			timerId = setInterval(countdownTimer, 1000);
 		}
-		function countdownTimer() {
-			const diff = deadline - new Date();
-			if (diff <= 0) {
-				clearInterval(timerId);
-			}
-			const $daysAll = document.querySelectorAll('.timer__days');
-			const $hoursAll = document.querySelectorAll('.timer__hours');
-			const $minutesAll = document.querySelectorAll('.timer__minutes');
-			const $secondsAll = document.querySelectorAll('.timer__seconds');
-			for (const $days of $daysAll) {
-				const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-				$days.textContent = days < 10 ? '0' + days : days;
-				$days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
-			}
-			for (const $hours of $hoursAll) {
-				const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-				$hours.textContent = hours < 10 ? '0' + hours : hours;
-				$hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
-			}
-			for (const $minutes of $minutesAll) {
-				const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-				$minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-				$minutes.dataset.title = declensionNum(minutes, ['мин', 'мин', 'мин']);
-			}
-			for (const $seconds of $secondsAll) {
-				const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-				$seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-				$seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
-			}
-		}
-		countdownTimer();
-		timerId = setInterval(countdownTimer, 1000);
 
 };
 if (document.readyState !== 'loading') {
