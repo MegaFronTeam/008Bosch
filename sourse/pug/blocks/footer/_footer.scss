@@ -55,19 +55,23 @@
     }
     .icon {
       color: $body-color;
-      font-size: 40px;
+      font-size: 20px;
+      @include mt;
     }
   }
-  .icon-youtube {
-    &:hover {
-      fill: $red;
+  .soc__item--youtube:hover {
+    border-color: $red;;
+    .icon-youtube {
+        fill: $red;
     }
   }
-  .icon-vk {
-    &:hover {
-      fill: $blue;
+  .soc__item--vk:hover {
+    border-color: $blue;;
+    .icon-vk {
+        fill: $blue;
     }
   }
+  
   &__logo{
     margin-bottom: rem(34);
     display: block;

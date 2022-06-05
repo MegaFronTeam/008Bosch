@@ -3,8 +3,15 @@ mixin sProdCard(data)
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
 		.container
 			block
-			+b.section-title.hit
-				h1.p-0 Аккумуляторная угловая шлифмашина с X-LOCK GBH 36 V-LI PLUS
+			mixin prodHeader(header,label, color)
+				.section-title.hit
+					if label
+						.label(class=`label--${color}`)= label
+						h1.p-0!= header
+					else
+						.col
+							h1.p-0!= header
+			+prodHeader('Аккумуляторная угловая шлифмашина с X-LOCK GBH 36 V-LI PLUS','Хит','red')
 			+e.main-row.row
 				.col-lg-8
 					+prodCardSliders()
@@ -63,12 +70,13 @@ mixin sProdCard(data)
 							+e.promo-link(href='#') Все акции
 						mixin promoItem(img,title)
 							+e.promo-item(href="#")
-								img(src=`img/@2x/promo-${img}.jpg`)
+								+e.promo-wrapper
+									img(src=`img/@2x/promo-${img}.jpg`)
 								+e.promo-name!= title
 						+promoItem('1','Созданы для работы по дереву')
 						+promoItem('2','Всего один CLICK!')
 						+promoItem('3','Все данные в одном формате')
-			+sCatalogHit('Рекомендуемые товары')
+			+sCatalogHit('Рекомендуемые товары').sCatalog--prodcard
 	
 					//- +tableDescr('Наличие в магазинах')
 					//- 	+tableDescrItem('Магазин Дмитровка', 'В наличии')
@@ -298,6 +306,6 @@ mixin prodCardThumb(imgNum)
 
 mixin prodCardSlide(imgNum)
 	.swiper-slide
-		+e.slide-img
+		+e.slide-img(href=`img/@2x/prod-gallery-1.jpg` data-fancybox=`prod-gallery`)
 			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.png` alt="")
 

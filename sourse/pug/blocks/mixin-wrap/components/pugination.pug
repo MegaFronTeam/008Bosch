@@ -4,7 +4,7 @@ mixin pugin(addClases)
 		+e.row.row
 			.col-auto.me-auto
 				+e.btn--controll(href="#")
-					+icon('chevron-left')
+					+icon('swiper-left')
 			+puginItem(1, 'current')
 			+puginItem(2)
 			+puginItem(3)
@@ -12,7 +12,7 @@ mixin pugin(addClases)
 			+puginItem('...')
 			.col-auto.ms-auto
 				+e.btn--controll(href="#")
-					+icon('chevron-right')
+					+icon('swiper-right')
 
 mixin puginItem(num, addClasses)
 	.col-auto

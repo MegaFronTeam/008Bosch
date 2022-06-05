@@ -1317,7 +1317,7 @@
 						</div>
 						<div class="col-lg-9">
 							<div class="sCatalogPage__row row">
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-1.png" alt=""/>
 										</div>
@@ -1325,7 +1325,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-2.png" alt=""/>
 										</div>
@@ -1333,7 +1333,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-3.png" alt=""/>
 										</div>
@@ -1341,7 +1341,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-4.png" alt=""/>
 										</div>
@@ -1349,7 +1349,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-5.png" alt=""/>
 										</div>
@@ -1357,7 +1357,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-6.png" alt=""/>
 										</div>
@@ -1365,7 +1365,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-7.png" alt=""/>
 										</div>
@@ -1373,7 +1373,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="col-md-6 col-lg-4">
+								<div class="col-sm-6 col-lg-4">
 									<a class="sCatalogPage__item" href="#">
 										<div class="sCatalogPage__img-wrap"><img loading="lazy" src="img/@2x/catalog-8.png" alt=""/>
 										</div>
@@ -1408,12 +1408,12 @@
 							<div class="col col-sm-6">
 								<div class="footer__social">Мы в социальных сетях
 									<div class="soc">
-										<a class="soc__item" href="#" target="_blank">
+										<a class="soc__item soc__item soc__item--youtube" href="#" target="_blank">
 											<svg class="icon icon-youtube ">
 												<use xlink:href="img/svg/sprite.svg#youtube"></use>
 											</svg>
 										</a>
-										<a class="soc__item" href="#" target="_blank">
+										<a class="soc__item soc__item soc__item--vk" href="#" target="_blank">
 											<svg class="icon icon-vk ">
 												<use xlink:href="img/svg/sprite.svg#vk"></use>
 											</svg>
@@ -1560,15 +1560,15 @@
 		</div>
 		<!--  start modals-->
 		<div class="d-none">
-			<div class="modal-win text-center" id="modal-city">
-				<div class="modal-win__title">Ваш город Москва?
+			<div class="modal-win" id="modal-city">
+				<div class="modal-win__title justify-content-center">Ваш город Москва?
 				</div>
-				<div class="row">
-					<div class="col">
+				<div class="row justify-content-center">
+					<div class="col-auto">
 						<button class="modal-win__btn" type="button">Да
 						</button>
 					</div>
-					<div class="col">
+					<div class="col-auto">
 						<button class="modal-win__btn-outline" type="button">Нет
 						</button>
 					</div>
@@ -1576,14 +1576,14 @@
 			</div>
 			<!-- #modal-city-->
 			<div class="modal-win text-center" id="modal-prod-add">
-				<div class="modal-win__title">Товар добавлен в корзину
+				<div class="modal-win__title justify-content-center">Товар добавлен в корзину
 				</div>
-				<div class="row">
-					<div class="col">
+				<div class="row justify-content-center">
+					<div class="col-auto">
 						<button class="modal-win__btn" type="button">Оформить
 						</button>
 					</div>
-					<div class="col">
+					<div class="col-auto">
 						<button class="modal-win__btn-outline" type="button">Продолжить
 						</button>
 					</div>
@@ -1720,9 +1720,13 @@
 							<!-- +e.input-wrap-->
 						</div>
 						<div class="modal-bottom row">
-							<div class="form-wrap__polite">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+							<div class="col-auto">
+								<div class="form-wrap__polite">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+								</div>
 							</div>
-							<input class="btn btn-primary mb-12" type="submit" value="Отправить"/>
+							<div class="col">
+								<input class="btn btn-primary" type="submit" value="Отправить"/>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -1732,7 +1736,7 @@
 				<div class="form-wrap">
 					<form>
 						<div class="modal-win__title mb-24">
-							 Авторизация<a href="#">Регистрация</a></div>
+							 Авторизация<a class="link-modal" href="#modal-reg">Регистрация</a></div>
 						<div class="form-wrap__input-wrap form-group">
 							<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
 							</label>
@@ -1746,9 +1750,13 @@
 						<a class="form-wrap__forgot d-block mb-24" href="#">Забыли пароль?
 						</a>
 						<div class="modal-bottom row">
-							<div class="form-wrap__polite col-auto">Нажимая кнопку "Войти", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+							<div class="col-auto">
+								<div class="form-wrap__polite">Нажимая кнопку "Войти", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+								</div>
 							</div>
-							<input class="btn btn-primary mb-12 col" type="submit" value="Войти"/>
+							<div class="col">
+								<input class="btn btn-primary" type="submit" value="Войти"/>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -1758,7 +1766,7 @@
 				<div class="form-wrap">
 					<form>
 						<div class="modal-win__title mb-24">
-							 Регистрация<a href="#">Авторизация</a></div>
+							 Регистрация<a class="link-modal" href="#modal-inner">Авторизация</a></div>
 						<div class="form-wrap__inputs">
 							<div class="form-wrap__input-wrap form-group">
 								<label><span class="form-wrap__input-title">Эл. почта*</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="" required="required"/>
@@ -1775,23 +1783,29 @@
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
-							<a class="form-wrap__forgot form-wrap__forgot--red d-block mb-24" href="#"> Пароли не совпадают
-							</a>
+							<div class="form-wrap__forgot form-wrap__forgot--red d-block mb-24"> Пароли не совпадают
+							</div>
 						</div>
 						<div class="modal-bottom row">
-							<div class="form-wrap__polite col-auto">Нажимая кнопку "Зарегистрироваться", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+							<div class="col">
+								<div class="form-wrap__polite">Нажимая кнопку "Зарегистрироваться", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+								</div>
 							</div>
-							<input class="btn btn-primary mb-12 col" type="submit" value="Зарегистрироваться"/>
+							<div class="col-auto">
+								<input class="btn btn-primary" type="submit" value="Зарегистрироваться"/>
+							</div>
 						</div>
 					</form>
 				</div>
 			</div>
 			<!-- #modal-reg-->
-			<div class="modal-win" id="modal-order-request">
+			<div class="modal-win modal-win--large" id="modal-order-request">
 				<div class="form-wrap">
 					<form>
 						<div class="modal-win__title text-center mb-24">Запрос счёта</div>
-						<div class="form-wrap__inputs">
+						<div class="form-wrap__input-title file-headline">Контактные данные
+						</div>
+						<div class="form-wrap__inputs mb-60">
 							<div class="form-wrap__input-wrap form-group">
 								<label><span class="form-wrap__input-title">ФИО*</span><input class="form-wrap__input form-control" name="user-name" type="text" placeholder="" required="required"/>
 								</label>
@@ -1810,7 +1824,7 @@
 						</div>
 						<div class="tabs">
 							<div class="tabs__caption row">
-								<div class="col-6">
+								<div class="col-6 ps-0">
 									<div class="tabs__btn active">Заполнить реквизиты</div>
 								</div>
 								<div class="col-6">
@@ -1819,6 +1833,8 @@
 							</div>
 							<div class="tabs__wrap">
 								<div class="tabs__content active">
+									<div class="form-wrap__input-title file-headline">Реквизиты
+									</div>
 									<div class="form-wrap__inputs">
 										<div class="form-wrap__input-wrap form-group">
 											<label><span class="form-wrap__input-title">Корр. счёт</span><input class="form-wrap__input form-control" name="account-1" type="text" placeholder=""/>
@@ -1849,9 +1865,13 @@
 							</div>
 						</div>
 						<div class="modal-bottom row">
-							<div class="form-wrap__polite col-auto">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+							<div class="col-auto">
+								<div class="form-wrap__polite col">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#">Политикой конфиденциальности.</a>
+								</div>
 							</div>
-							<input class="btn btn-primary mb-12 col" type="submit" value="Отправить"/>
+							<div class="col">
+								<input class="btn btn-primary" type="submit" value="Отправить"/>
+							</div>
 						</div>
 					</form>
 				</div>

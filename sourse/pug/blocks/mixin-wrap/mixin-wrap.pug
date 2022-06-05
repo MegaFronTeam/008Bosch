@@ -12,14 +12,14 @@ include components/btn.pug
 mixin arrow(className)
 	if className
 		.swiper-prev(class=className)
-			+icon('chevron-left')
+			+icon('swiper-left')
 		.swiper-next(class=className)
-			+icon('chevron-right')
+			+icon('swiper-right')
 	else
 		.swiper-prev
-			+icon('chevron-left')
+			+icon('swiper-left')
 		.swiper-next
-			+icon('chevron-right')
+			+icon('swiper-right')
 //- /arrow for swiper-slider
 
 mixin ie11()

@@ -19,6 +19,11 @@
 			}
 		}
 	}
+	&.sCatalog--prodcard {
+		.section-title {
+			margin-bottom: 15px;
+		}
+	}
 	&.sCatalog--similar{
 		.swiper-wrapper{
 			@include media-breakpoint-up(md){

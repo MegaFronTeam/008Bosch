@@ -4,18 +4,24 @@
 	@include roww(10px, m);
 	display: flex;
 	&__item{
+		border: 1px solid $body-color;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
 		text-decoration: none !important; 
 		vertical-align: middle;
 		@include mt;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
 		
-	}
-	.icon{
-		font-size: rem(30);
+		.icon{
+			font-size: rem(20);
+		}
 	}
 	 
 

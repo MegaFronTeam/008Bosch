@@ -709,12 +709,12 @@ h2{
 	}
 }
 
-.container{
-	@include media-breakpoint-between(xsm, sm){
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
+// .container{
+// 	@include media-breakpoint-between(xsm, sm){
+// 		padding-left: 20px;
+// 		padding-right: 20px;
+// 	}
+// }
 //
 body{
 	//pop-up css
@@ -751,7 +751,6 @@ body{
 			}
 			.icon{
 				@include mt();
-				stroke-width: 2px;
 				font-size: 24px;
 				color: transparent;
 				fill: none;
