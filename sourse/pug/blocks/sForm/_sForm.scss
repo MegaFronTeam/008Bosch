@@ -26,6 +26,9 @@
 	}
 	
 	.form-wrap{
+		form {
+			background-color: transparent;
+		}
 		&__row{
 			@include media-breakpoint-up(xl){
 				margin-top: 28px;

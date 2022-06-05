@@ -64,6 +64,9 @@
 		}
 	}
 	.form-wrap{
+		form {
+			background-color: transparent;
+		}
 		&__input-wrap{
 			margin-bottom: 12px;
 			label{
@@ -99,28 +102,33 @@
 		}
 		&__input {
 			font-size: rem(16);
-			&--correct {
+			&.is-valid {
 				border-color: $primary;
+				background-image: none;
 			}
-			&--incorrect {
+			&.is-invalid {
+				background-image: none;
 				border-color: $red;
 				color: $red;
 				position: relative;
 			}
 		}
+		.invalid-feedback {
+			display: block;
+			position: absolute;
+			@include media-breakpoint-up(md) {
+				left: 100px;
+			}
+		}
 		&__input-incorrect-wrap {
 			position: relative;
 			p {
-				position: absolute;
 				color: $red;
 				font-size: rem(12);
 				line-height: 1.60em;
 				margin-bottom: 0;
 				left: 0;
 				bottom: -20px;
-				@include media-breakpoint-up(md) {
-    			left: 100px;
-				}
 			}
 			.form-wrap__input-wrap {
 				margin-bottom: 0;
