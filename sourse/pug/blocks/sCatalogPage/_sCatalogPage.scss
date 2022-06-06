@@ -252,6 +252,9 @@
 	}
 	&__items{
 		padding-bottom: 15px;
+		@include media-breakpoint-up(lg) {
+			display: block !important;
+		}
 	}
 	&__item{
 		@include mt();
