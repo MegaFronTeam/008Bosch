@@ -10,7 +10,7 @@ mixin sCatalogPage(data)
 							+e.header Каталог
 								+icon('chevron-down')
 							+e.items
-								+asideItem('Аккумуляторные инструменты')
+								+asideItem('Аккумуляторные инструменты').current
 								+asideItem('Инструменты с функцией Connectivity и Bluetooth-модули')
 								+asideItem('Система 18 В')
 								+asideItem('Дрели-шуруповерты')
@@ -61,7 +61,7 @@ mixin sCatalogPage2(data)
 						+catalogPageItem(8, 'Техника для алмазного сверления')
 
 mixin asideItem(name, activeClass='')
-	+e.item(class=activeClass)
+	+e.item(class=activeClass)&attributes(attributes)
 		+e.i-head.dd-head-js
 			+e.name=name
 			//- +icon('chevron-down')

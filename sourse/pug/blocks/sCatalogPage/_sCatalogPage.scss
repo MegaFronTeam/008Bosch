@@ -298,11 +298,11 @@
 		}
 
 		&.current{
-			background-color: $body-color!important;
-			color: $white!important;
+			background-color: $white!important;
+			color: $black!important;
 			--head-bb-col: #{$body-color}!important;
 			--plus-o: 0;
-			--link-color: #{$white};
+			--link-color: #{$black};
 			--link-color-hover: #{$light};
 		}
 	}
