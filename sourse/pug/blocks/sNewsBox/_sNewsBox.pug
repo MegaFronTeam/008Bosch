@@ -30,7 +30,8 @@ mixin NewsBoxItem(img,date, title,descr)
 	.col-12.col-sm-6.col-lg-4
 		+e.item(href="#")
 			+e.img-wrap
-				img(loading="lazy" src=`img/@2x/news-${img}.jpg` alt="")
+				.img-wrap-center
+					img(loading="lazy" src=`img/@2x/news-${img}.jpg` alt="")
 			+e.date=date
 			+e.title!= title
 			+e.descr!= descr

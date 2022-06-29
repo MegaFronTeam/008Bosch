@@ -637,6 +637,8 @@
 	background-color: #fff;
 	&__img {
 		padding: rem(20) rem(15) rem(20) rem(20);
+		// @include block(119, 120);
+		width: rem(154);
 	}
 	&__info-wrap {
 		padding: rem(20) rem(20) rem(20) rem(15);

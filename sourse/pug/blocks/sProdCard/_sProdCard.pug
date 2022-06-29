@@ -307,5 +307,6 @@ mixin prodCardThumb(imgNum)
 mixin prodCardSlide(imgNum)
 	.swiper-slide
 		+e.slide-img(href=`img/@2x/prod-gallery-1.jpg` data-fancybox=`prod-gallery`)
-			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.png` alt="")
+			.img-wrap-center
+				img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-img.png` alt="")
 

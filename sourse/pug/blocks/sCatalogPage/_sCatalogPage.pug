@@ -29,7 +29,8 @@ mixin catalogPageItem(imgNum, name, bootClasses="")
 	.col-sm-6.col-lg-4(class=bootClasses)
 		+e.item(href='#')
 			+e.img-wrap
-				img(loading="lazy" src=`img/@2x/catalog-${imgNum}.png` alt="")
+				.img-wrap-center
+					img(loading="lazy" src=`img/@2x/catalog-${imgNum}.png` alt="")
 			+e.i-name=name
 
 mixin sCatalogPage2(data)
@@ -275,7 +276,8 @@ mixin itemProdLong(title,img,tag)
 				.prod-item__badge.bg-green Новинка
 			else
 			+e.img
-				img(loading='lazy' src=`img/@2x/lc-img-${img}.png` alt="")
+				.img-wrap-center
+					img(loading='lazy' src=`img/@2x/lc-img-${img}.png` alt="")
 			+e.content-col
 				+e.code VB3616DA
 				if title
