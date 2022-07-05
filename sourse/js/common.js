@@ -419,10 +419,10 @@ function eventHandler() {
 
 	for (let pcSlider of pcSliders) {
 		const prodCardThumb = new Swiper(pcSlider.querySelector('.sProdCard-thumb-js'), {
-			slidesPerView: 'auto',
+			slidesPerView: 'auto', 
 			breakpoints: {
 				0: {
-					direction: 'horizontal',
+					// direction: 'horizontal',
 					spaceBetween: 16,
 				},
 				768: {
@@ -449,7 +449,7 @@ function eventHandler() {
 				loadPrevNext: true,
 				loadPrevNextAmount: 3,
 			},
-			loop: true,
+			loop: true, 
 		});
 	}
 

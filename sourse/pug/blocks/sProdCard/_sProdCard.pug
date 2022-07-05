@@ -257,7 +257,10 @@ mixin buyBlock()
 			+e.price-col.col.col-md-6.col-lg-12
 				+e.price-row.row
 					.col.col-lg-12.col-xl.d-flex.flex-column
-						+e.price--new 16 500 ₽
+						.row  
+							+e.price--new.col 16 500 ₽
+							.col-auto
+								+e.label(style="--label-bg:var(--bs-danger; --label-color:#fff") -10%
 						+e.price--old 18 500 ₽
 					+e.inputs-col.col.col-lg-12.col-xl
 						+e.price
@@ -284,6 +287,7 @@ mixin prodCardSliders(addClasses='')
 				+e.slider
 					.swiper.sProdCard-slider-js
 						.swiper-wrapper
+							+prodCardSlide(1)
 							+prodCardSlide(1)
 							+prodCardSlide(1)
 							+prodCardSlide(1)
