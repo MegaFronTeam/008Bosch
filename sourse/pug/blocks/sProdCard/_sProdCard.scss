@@ -672,6 +672,9 @@
 		color: var(--label-color, #{$white});
 		background-color:var(--label-bg, #{ $red});
 		padding: 6px 16px;
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
 
 	}
 	&__price--old{
