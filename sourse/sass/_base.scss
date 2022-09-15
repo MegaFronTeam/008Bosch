@@ -857,3 +857,11 @@ body{
 		max-height: 100%;
 	}
 }
+
+.bx-sls {
+	flex-grow: 1;
+}
+
+.bx-sls .dropdown-block {
+	min-height: 2.5625rem;
+}
